@@ -1,15 +1,21 @@
 {
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Jane Doe",
       "email": "jane@example.com",
       "password": "password123"
+    },
+    {
+      "fullName": "kriscagle@gmail.com",
+      "email": "kriscagle@gmail.com",
+      "password": "Dobis123$$",
+      "id": "uy4YJfldQcM"
     }
   ],
   "artists": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Nova Reyes",
       "bio": "Indie-R&B singer-songwriter from Nashville. Known for blending soulful vocals with acoustic production.",
       "photoUrl": "https://placehold.co/300x300",
@@ -18,7 +24,7 @@
       "userId": 1
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Dex Holloway",
       "bio": "Atlanta-based Hip-Hop producer and lyricist with a knack for storytelling.",
       "photoUrl": "https://placehold.co/300x300",
@@ -27,7 +33,7 @@
       "userId": 1
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Lara Moss",
       "bio": "Indie-Pop artist from Austin blending dreamy synths with catchy songwriting.",
       "photoUrl": "https://placehold.co/300x300",
@@ -38,7 +44,7 @@
   ],
   "tourDates": [
     {
-      "id": 1,
+      "id": "1",
       "venue": "The Ryman Auditorium",
       "city": "Nashville, TN",
       "date": "2025-08-14",
@@ -46,7 +52,7 @@
       "artistId": 1
     },
     {
-      "id": 2,
+      "id": "2",
       "venue": "9:30 Club",
       "city": "Washington, DC",
       "date": "2025-09-03",
@@ -54,7 +60,7 @@
       "artistId": 1
     },
     {
-      "id": 3,
+      "id": "3",
       "venue": "The Masquerade",
       "city": "Atlanta, GA",
       "date": "2025-08-22",
@@ -63,22 +69,73 @@
     }
   ],
   "genres": [
-    { "id": 1, "name": "Indie" },
-    { "id": 2, "name": "R&B" },
-    { "id": 3, "name": "Hip-Hop" },
-    { "id": 4, "name": "Pop" },
-    { "id": 5, "name": "Rock" },
-    { "id": 6, "name": "Electronic" },
-    { "id": 7, "name": "Country" },
-    { "id": 8, "name": "Alt" },
-    { "id": 9, "name": "Synthwave" },
-    { "id": 10, "name": "Death Core" }
+    {
+      "id": "1",
+      "name": "Indie"
+    },
+    {
+      "id": "2",
+      "name": "R&B"
+    },
+    {
+      "id": "3",
+      "name": "Hip-Hop"
+    },
+    {
+      "id": "4",
+      "name": "Pop"
+    },
+    {
+      "id": "5",
+      "name": "Rock"
+    },
+    {
+      "id": "6",
+      "name": "Electronic"
+    },
+    {
+      "id": "7",
+      "name": "Country"
+    },
+    {
+      "id": "8",
+      "name": "Alt"
+    },
+    {
+      "id": "9",
+      "name": "Synthwave"
+    },
+    {
+      "id": "10",
+      "name": "Death Core"
+    }
   ],
   "artistGenres": [
-    { "id": 1, "artistId": 1, "genreId": 1 },
-    { "id": 2, "artistId": 1, "genreId": 2 },
-    { "id": 3, "artistId": 2, "genreId": 3 },
-    { "id": 4, "artistId": 3, "genreId": 1 },
-    { "id": 5, "artistId": 3, "genreId": 4 }
-  ]
+    {
+      "id": "1",
+      "artistId": 1,
+      "genreId": 1
+    },
+    {
+      "id": "2",
+      "artistId": 1,
+      "genreId": 2
+    },
+    {
+      "id": "3",
+      "artistId": 2,
+      "genreId": 3
+    },
+    {
+      "id": "4",
+      "artistId": 3,
+      "genreId": 1
+    },
+    {
+      "id": "5",
+      "artistId": 3,
+      "genreId": 4
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

@@ -1,103 +1,107 @@
 import { useState } from "react"
-import { useNavigate } from "react-router-dom"
-import { createUser, getUserByEmail } from "../../services/authService"
+import { Link, useNavigate } from "react-router-dom"
+import { registerUser } from "../services/authService"
 
-export const Register = (props) => {
-  const [user, setUser] = useState({
-    email: "",
+export const Register = ({ setCurrentUser }) => {
+  const [newUser, setNewUser] = useState({
     fullName: "",
-    isStaff: false,
+    email: "",
+    password: "",
   })
-  let navigate = useNavigate()
 
-  const registerNewUser = () => {
-    createUser(user).then((createdUser) => {
-      if (createdUser.hasOwnProperty("id")) {
-        localStorage.setItem(
-          "manager_user",
-          JSON.stringify({
-            id: createdUser.id,
-          })
-        )
-
-        navigate("/")
-      }
-    })
-  }
+  const navigate = useNavigate()
 
   const handleRegister = (e) => {
     e.preventDefault()
-    getUserByEmail(user.email).then((response) => {
-      if (response.length > 0) {
-        // Duplicate email. No good.
-        window.alert("Account with that email address already exists")
+
+    registerUser(newUser).then((createdUser) => {
+      if (createdUser) {
+        setCurrentUser(createdUser)
+        navigate("/roster")
       } else {
-        // Good email, create user.
-        registerNewUser()
+        window.alert("Unable to create account")
       }
     })
   }
 
-  const updateUser = (evt) => {
-    const copy = { ...user }
-    copy[evt.target.id] = evt.target.value
-    setUser(copy)
-  }
-
   return (
-    <main style={{ textAlign: "center" }}>
-      <form className="form-login" onSubmit={handleRegister}>
-        <h1>Honey Rae Repairs</h1>
-        <h2>Please Register</h2>
-        <fieldset>
-          <div className="form-group">
-            <input
-              onChange={updateUser}
-              type="text"
-              id="fullName"
-              className="form-control"
-              placeholder="Enter your name"
-              required
-              autoFocus
-            />
-          </div>
-        </fieldset>
-        <fieldset>
-          <div className="form-group">
-            <input
-              onChange={updateUser}
-              type="email"
-              id="email"
-              className="form-control"
-              placeholder="Email address"
-              required
-            />
-          </div>
-        </fieldset>
-        <fieldset>
-          <div className="form-group">
-            <label>
+    <main className="min-h-screen flex items-center justify-center bg-gray-800">
+      <section className="bg-gray-700 rounded-2xl border border-grey-400 p-10 w-full max-w-md">
+        <form onSubmit={handleRegister}>
+          <h1 className="text-3xl font-bold text-white text-center mb-2">
+            SoundRoster
+          </h1>
+          <h2 className="text-lg text-gray-300 text-center mb-8">
+            Create your account
+          </h2>
+
+          <fieldset className="mb-4">
+            <div className="form-group">
               <input
-                onChange={(evt) => {
-                  const copy = { ...user }
-                  copy.isStaff = evt.target.checked
-                  setUser(copy)
-                }}
-                type="checkbox"
-                id="isStaff"
+                type="text"
+                value={newUser.fullName}
+                onChange={(e) =>
+                  setNewUser({ ...newUser, fullName: e.target.value })
+                }
+                className="w-full px-4 py-2 rounded-lg bg-blue-400 text-white placeholder-white focus:outline-none"
+                placeholder="Full name"
+                required
+                autoFocus
               />
-              I am an employee{" "}
-            </label>
-          </div>
-        </fieldset>
-        <fieldset>
-          <div className="form-group">
-            <button className="login-btn btn-info" type="submit">
-              Register
-            </button>
-          </div>
-        </fieldset>
-      </form>
+            </div>
+          </fieldset>
+
+          <fieldset className="mb-4">
+            <div className="form-group">
+              <input
+                type="email"
+                value={newUser.email}
+                onChange={(e) =>
+                  setNewUser({ ...newUser, email: e.target.value })
+                }
+                className="w-full px-4 py-2 rounded-lg bg-blue-400 text-white placeholder-white focus:outline-none"
+                placeholder="Email address"
+                required
+              />
+            </div>
+          </fieldset>
+
+          <fieldset className="mb-6">
+            <div className="form-group">
+              <input
+                type="password"
+                value={newUser.password}
+                onChange={(e) =>
+                  setNewUser({ ...newUser, password: e.target.value })
+                }
+                className="w-full px-4 py-2 rounded-lg bg-blue-400 text-white placeholder-white focus:outline-none"
+                placeholder="Password"
+                required
+              />
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <div className="form-group">
+              <button
+                type="submit"
+                className="w-full py-2 rounded-lg bg-white text-blue-500 font-semibold hover:bg-gray-100 transition"
+              >
+                Sign up
+              </button>
+            </div>
+          </fieldset>
+        </form>
+
+        <section className="text-center mt-6">
+          <Link
+            to="/login"
+            className="text-gray-300 hover:text-white text-sm"
+          >
+            Already have an account? Sign in
+          </Link>
+        </section>
+      </section>
     </main>
   )
 }
