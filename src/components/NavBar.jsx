@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { Link, NavLink, useNavigate } from "react-router-dom"
+import soundRosterLogo from "../assets/sound-roster-logo.png"
 
 export const NavBar = ({ currentUser, setCurrentUser }) => {
   const [showDropdown, setShowDropdown] = useState(false)
@@ -15,16 +16,20 @@ export const NavBar = ({ currentUser, setCurrentUser }) => {
 
   const navLinkStyle = ({ isActive }) =>
     isActive
-      ? "text-white font-semibold"
-      : "text-gray-300 hover:text-white transition"
+      ? "text-white font-bold"
+      : "text-gray-300 text-xl lg hover:text-white transition"
 
   return (
-    <nav className="bg-gray-900 border-b border-gray-700 px-6 py-4">
-      <div className="max-w-7xl mx-auto flex items-center justify-between">
+    <nav className="bg-blue-500 border-b border-black px-6 py-4">
+      <div className="mx-auto flex max-w-7xl items-center justify-between">
         <div className="flex items-center gap-8">
-          <Link to="/" className="text-white text-2xl font-bold">
-            Sound Roster
-          </Link>
+         <Link to="/" className="flex h-14 w-[280px] items-center overflow-hidden">
+  <img
+    src={soundRosterLogo}
+    alt="Sound Roster"
+    className="h-28 max-w-none origin-left scale-[2] -translate-x-14"
+  />
+</Link>
 
           <div className="flex items-center gap-6">
             <NavLink to="/roster" className={navLinkStyle}>
@@ -40,17 +45,17 @@ export const NavBar = ({ currentUser, setCurrentUser }) => {
         <div className="relative">
           <button
             onClick={() => setShowDropdown(!showDropdown)}
-            className="text-gray-300 hover:text-white transition flex items-center gap-2"
+            className="flex items-center gap-2 text-gray-100 transition hover:text-white"
           >
             <span>{username}</span>
             <span className="text-xs">▼</span>
           </button>
 
           {showDropdown && (
-            <div className="absolute right-0 mt-2 w-40 bg-white rounded-lg shadow-lg overflow-hidden z-50">
+            <div className="absolute right-0 z-50 mt-2 w-40 overflow-hidden rounded-lg bg-white shadow-lg">
               <button
                 onClick={handleLogout}
-                className="block w-full text-left px-4 py-3 text-gray-800 hover:bg-gray-100"
+                className="block w-full px-4 py-3 text-left text-gray-800 hover:bg-gray-100"
               >
                 Log Out
               </button>
