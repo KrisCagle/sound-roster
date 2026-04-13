@@ -10,15 +10,16 @@ export const Login = ({ setCurrentUser }) => {
   const handleLogin = (e) => {
     e.preventDefault()
 
-    loginUser(email, password).then((user) => {
-      if (user) {
-        setCurrentUser(user)
-        navigate("/roster")
-      } else {
-        window.alert("Invalid email or password")
-      }
-    })
+   loginUser(email, password).then((user) => {
+  if (user) {
+    localStorage.setItem("sound_roster_user", JSON.stringify(user))
+    setCurrentUser(user)
+    navigate("/roster")
+  } else {
+    window.alert("Invalid email or password")
   }
+})
+}
 
   return (
     <main className="min-h-screen flex items-center justify-center bg-gray-800">

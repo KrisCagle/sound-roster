@@ -1,16 +1,16 @@
 {
   "users": [
     {
-      "id": "1",
-      "name": "Jane Doe",
-      "email": "jane@example.com",
-      "password": "password123"
-    },
-    {
       "fullName": "kriscagle@gmail.com",
       "email": "kriscagle@gmail.com",
       "password": "Dobis123$$",
       "id": "uy4YJfldQcM"
+    },
+    {
+      "fullName": "Kris Cagle",
+      "email": "kriscagle@gmail.com",
+      "password": "Dobis123$",
+      "id": "Q8zjwEq1Ul8"
     }
   ],
   "artists": [
