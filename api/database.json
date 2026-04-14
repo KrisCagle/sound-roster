@@ -1,12 +1,6 @@
 {
   "users": [
     {
-      "fullName": "kriscagle@gmail.com",
-      "email": "kriscagle@gmail.com",
-      "password": "Dobis123$$",
-      "id": "uy4YJfldQcM"
-    },
-    {
       "fullName": "Kris Cagle",
       "email": "kriscagle@gmail.com",
       "password": "Dobis123$",
@@ -14,34 +8,61 @@
     }
   ],
   "artists": [
-    {
-      "id": "1",
-      "name": "Nova Reyes",
-      "bio": "Indie-R&B singer-songwriter from Nashville. Known for blending soulful vocals with acoustic production.",
-      "photoUrl": "https://placehold.co/300x300",
-      "originCity": "Nashville, TN",
-      "activeSince": 2019,
-      "userId": 1
-    },
-    {
-      "id": "2",
-      "name": "Dex Holloway",
-      "bio": "Atlanta-based Hip-Hop producer and lyricist with a knack for storytelling.",
-      "photoUrl": "https://placehold.co/300x300",
-      "originCity": "Atlanta, GA",
-      "activeSince": 2021,
-      "userId": 1
-    },
-    {
-      "id": "3",
-      "name": "Lara Moss",
-      "bio": "Indie-Pop artist from Austin blending dreamy synths with catchy songwriting.",
-      "photoUrl": "https://placehold.co/300x300",
-      "originCity": "Austin, TX",
-      "activeSince": 2018,
-      "userId": 1
-    }
-  ],
+  {
+    "id": "1",
+    "name": "Nova Reyes",
+    "bio": "Indie-R&B singer-songwriter from Nashville. Known for blending soulful vocals with acoustic production.",
+    "photoUrl": "/images/artists/NovaReyes.jpg",
+    "originCity": "Nashville, TN",
+    "activeSince": 2019,
+    "userId": "Q8zjwEq1Ul8"
+  },
+  {
+    "id": "2",
+    "name": "Dex Holloway",
+    "bio": "Atlanta-based Hip-Hop producer and lyricist with a knack for storytelling.",
+    "photoUrl": "/images/artists/DexHolloway.jpg",
+    "originCity": "Atlanta, GA",
+    "activeSince": 2021,
+    "userId": "Q8zjwEq1Ul8"
+  },
+  {
+    "id": "3",
+    "name": "Lara Moss",
+    "bio": "Indie-Pop artist from Austin blending dreamy synths with catchy songwriting.",
+    "photoUrl": "/images/artists/LaraMoss.jpg",
+    "originCity": "Austin, TX",
+    "activeSince": 2018,
+    "userId": "Q8zjwEq1Ul8"
+  },
+  {
+    "id": "4",
+    "name": "Midnight Arcade",
+    "bio": "Retro-inspired synthwave duo delivering neon-drenched hooks and cinematic live sets.",
+    "photoUrl": "/images/artists/MidnightArcade.jpg",
+    "originCity": "Knoxville, TN",
+    "activeSince": 2020,
+    "userId": "Q8zjwEq1Ul8"
+  },
+  {
+    "id": "5",
+    "name": "The Hollow Pines",
+    "bio": "Alt-country band mixing southern grit with modern Americana songwriting.",
+    "photoUrl": "/images/artists/TheHollowPines.jpg",
+    "originCity": "Franklin, TN",
+    "activeSince": 2017,
+    "userId": "Q8zjwEq1Ul8"
+  },
+  {
+    "id": "6",
+    "name": "Velvet Static",
+    "bio": "Electronic-pop project built around dark textures, polished vocals, and festival-ready choruses.",
+    "photoUrl": "/images/artists/VelvetStatic.jpg",
+    "originCity": "Murfreesboro, TN",
+    "activeSince": 2022,
+    "userId": "Q8zjwEq1Ul8"
+  }
+],
   "tourDates": [
     {
       "id": "1",
@@ -49,7 +70,7 @@
       "city": "Nashville, TN",
       "date": "2025-08-14",
       "ticketUrl": "https://ryman.com",
-      "artistId": 1
+      "artistId": "1"
     },
     {
       "id": "2",
@@ -57,7 +78,7 @@
       "city": "Washington, DC",
       "date": "2025-09-03",
       "ticketUrl": "https://930.com",
-      "artistId": 1
+      "artistId": "1"
     },
     {
       "id": "3",
@@ -65,7 +86,7 @@
       "city": "Atlanta, GA",
       "date": "2025-08-22",
       "ticketUrl": "https://masqueradeatlanta.com",
-      "artistId": 2
+      "artistId": "2"
     }
   ],
   "genres": [
@@ -108,33 +129,67 @@
     {
       "id": "10",
       "name": "Death Core"
+    },
+    {
+      "id": "11",
+      "name": "Americana"
     }
   ],
   "artistGenres": [
     {
       "id": "1",
-      "artistId": 1,
-      "genreId": 1
+      "artistId": "1",
+      "genreId": "1"
     },
     {
       "id": "2",
-      "artistId": 1,
-      "genreId": 2
+      "artistId": "1",
+      "genreId": "2"
     },
     {
       "id": "3",
-      "artistId": 2,
-      "genreId": 3
+      "artistId": "2",
+      "genreId": "3"
     },
     {
       "id": "4",
-      "artistId": 3,
-      "genreId": 1
+      "artistId": "3",
+      "genreId": "1"
     },
     {
       "id": "5",
-      "artistId": 3,
-      "genreId": 4
+      "artistId": "3",
+      "genreId": "4"
+    },
+    {
+      "id": "6",
+      "artistId": "4",
+      "genreId": "9"
+    },
+    {
+      "id": "7",
+      "artistId": "4",
+      "genreId": "6"
+    },
+    {
+      "id": "8",
+      "artistId": "5",
+      "genreId": "7"
+    },
+    {
+      "id": "9",
+      "artistId": "5",
+      "genreId": "11"
+    },
+    {
+      "id": "10",
+      "artistId": "6",
+      "genreId": "6"
+    },
+    {
+      "id": "11",
+      "artistId": "6",
+      "genreId": "4"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
