@@ -27,3 +27,57 @@ export const getRosterArtistsForUser = async (userId) => {
     }
   })
 }
+
+export const getArtistById = async (artistId) => {
+  const response = await fetch(`${baseUrl}/artists/${artistId}`)
+  return response.json()
+}
+
+export const getAllGenres = async () => {
+  const response = await fetch(`${baseUrl}/genres`)
+  return response.json()
+}
+
+export const getArtistGenreLinksByArtistId = async (artistId) => {
+  const response = await fetch(`${baseUrl}/artistGenres?artistId=${artistId}`)
+  return response.json()
+}
+
+export const updateArtist = async (artist) => {
+  const response = await fetch(`${baseUrl}/artists/${artist.id}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(artist),
+  })
+
+  return response.json()
+}
+
+export const replaceArtistGenres = async (artistId, selectedGenreIds) => {
+  const existingLinks = await getArtistGenreLinksByArtistId(artistId)
+
+  await Promise.all(
+    existingLinks.map((link) =>
+      fetch(`${baseUrl}/artistGenres/${link.id}`, {
+        method: "DELETE",
+      })
+    )
+  )
+
+  await Promise.all(
+    selectedGenreIds.map((genreId) =>
+      fetch(`${baseUrl}/artistGenres`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          artistId,
+          genreId,
+        }),
+      })
+    )
+  )
+}
