@@ -1,70 +1,235 @@
-# Getting Started with Create React App
+# SoundRoster
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+SoundRoster is a music management web app for tracking artists, genres, and tour dates in one place.
 
-## Available Scripts
+## Overview
 
-In the project directory, you can run:
+This project is built for music managers who need a clean way to manage a roster of artists, browse profiles, and keep basic artist information organized.
 
-### `npm start`
+The current version includes:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- User registration and login
+- Persistent login state with local storage
+- A branded landing page
+- A navigation bar with logo and account menu
+- A **My Roster** page connected to a JSON Server database
+- Artist photo cards with artist names, origin city, and genre tags
+- Artist-to-genre relationships using a join table
+- Routing for future pages like **Add Artist**, **Artist Profile**, and **Browse All**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **React**
+- **React Router**
+- **Tailwind CSS**
+- **JSON Server**
+- **JavaScript**
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Current Features
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Authentication
+Users can:
+- Register for an account
+- Log in with email and password
+- Stay logged in using local storage
+- Log out from the navigation dropdown
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Navigation
+The app currently includes:
+- **Home**
+- **My Roster**
+- **Browse All**
+- **Artist Profile**
+- **Add Artist**
+- **Edit Artist**
+- **Add Tour Date**
 
-### `npm run eject`
+### My Roster
+The **My Roster** page:
+- Pulls artist data from the database
+- Filters artists by the logged-in user
+- Displays artist photo cards
+- Shows artist name
+- Shows artist origin city
+- Shows genre bubbles based on `artistGenres` + `genres`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Database Structure
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+The project currently uses the following resources in `database.json`:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- `users`
+- `artists`
+- `tourDates`
+- `genres`
+- `artistGenres`
 
-## Learn More
+### Relationships
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- A **user** owns many **artists**
+- An **artist** has many **tourDates**
+- An **artist** can have many **genres**
+- A **genre** can belong to many **artists**
+- `artistGenres` acts as the join table between artists and genres
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## Project Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```txt
+src/
+  components/
+    NavBar.jsx
+  pages/
+    Home.jsx
+    Login.jsx
+    Register.jsx
+    MyRoster.jsx
+    BrowseAll.jsx
+    ArtistProfile.jsx
+    AddArtist.jsx
+    EditArtist.jsx
+    AddTourDate.jsx
+  services/
+    authService.js
+    artistService.js
+public/
+  images/
+    artists/
+database.json
+```
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Getting Started
 
-### Making a Progressive Web App
+### 1. Install dependencies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```bash
+npm install
+```
 
-### Advanced Configuration
+### 2. Start JSON Server
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Make sure your database is running on port `8088`:
 
-### Deployment
+```bash
+json-server -p 8088 -w database.json
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### 3. Start the React app
 
-### `npm run build` fails to minify
+If this project is using Create React App:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+npm start
+```
+
+The frontend should run on:
+
+```txt
+http://localhost:3000
+```
+
+---
+
+## Image Setup
+
+Artist images are stored in:
+
+```txt
+public/images/artists/
+```
+
+Example:
+
+```txt
+public/images/artists/NovaReyes.jpg
+```
+
+Then reference them in `database.json` like this:
+
+```json
+"photoUrl": "/images/artists/NovaReyes.jpg"
+```
+
+---
+
+## Example Artist Record
+
+```json
+{
+  "id": "1",
+  "name": "Nova Reyes",
+  "bio": "Indie-R&B singer-songwriter from Nashville.",
+  "photoUrl": "/images/artists/NovaReyes.jpg",
+  "originCity": "Nashville, TN",
+  "activeSince": 2019,
+  "userId": "Q8zjwEq1Ul8"
+}
+```
+
+---
+
+## Example Genre Relationship
+
+```json
+{
+  "id": "1",
+  "artistId": "1",
+  "genreId": "1"
+}
+```
+
+---
+
+## Routes
+
+Current routes include:
+
+- `/` — Home
+- `/login` — Login
+- `/register` — Register
+- `/roster` — My Roster
+- `/artists` — Browse All
+- `/artists/:artistId` — Artist Profile
+- `/artists/new` — Add Artist
+- `/artists/:artistId/edit` — Edit Artist
+- `/artists/:artistId/tourdates/new` — Add Tour Date
+
+---
+
+## Styling Notes
+
+The UI uses Tailwind utility classes for:
+- Layout and spacing
+- Borders and rounded cards
+- Shadows and hover effects
+- Glass-style card backgrounds
+- Responsive grid layouts
+
+---
+
+## Roadmap
+
+Planned next steps include:
+
+- Build the **Add Artist** page
+- Build the **Browse All** page fully
+- Build the **Artist Profile** page
+- Add edit/delete functionality for artists
+- Add tour date management
+- Add better validation and duplicate email checks
+- Improve image uploads
+- Improve manager-specific features
+
+---
+
+## Author
+
+Built by Kris Cagle.
