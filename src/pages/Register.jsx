@@ -10,20 +10,20 @@ export const Register = ({ setCurrentUser }) => {
   })
 
   const navigate = useNavigate()
-
+  
   const handleRegister = (e) => {
     e.preventDefault()
 
-    registerUser(newUser).then((createdUser) => {
-      if (createdUser) {
-        setCurrentUser(createdUser)
-        navigate("/roster")
-      } else {
-        window.alert("Unable to create account")
-      }
-    })
+ registerUser(newUser).then((createdUser) => {
+  if (createdUser?.id) {
+    localStorage.setItem("sound_roster_user", JSON.stringify(createdUser))
+    setCurrentUser(createdUser)
+    navigate("/roster")
+  } else {
+    window.alert("Unable to create account")
   }
-
+})
+  }
   return (
     <main className="min-h-screen flex items-center justify-center bg-gray-800">
       <section className="bg-gray-700 rounded-2xl border border-grey-400 p-10 w-full max-w-md">
