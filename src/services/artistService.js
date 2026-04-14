@@ -81,3 +81,7 @@ export const replaceArtistGenres = async (artistId, selectedGenreIds) => {
     )
   )
 }
+export const getTourDatesByArtistId = async (artistId) => {
+  const response = await fetch(`${baseUrl}/tourDates?artistId=${artistId}`)
+  return response.json()
+}

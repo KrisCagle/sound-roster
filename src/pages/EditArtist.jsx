@@ -8,6 +8,7 @@ import {
   replaceArtistGenres,
 } from "../services/artistService"
 
+
 export const EditArtist = ({ currentUser }) => {
   const { artistId } = useParams()
   const navigate = useNavigate()
@@ -85,6 +86,7 @@ export const EditArtist = ({ currentUser }) => {
 
     navigate(`/artists/${artist.id}`)
   }
+  
 
   if (!currentUser) {
     return (
@@ -108,6 +110,7 @@ export const EditArtist = ({ currentUser }) => {
       </main>
     )
   }
+  
 
   return (
     <main className="min-h-screen bg-neutral-600 px-6 py-10 text-white">
