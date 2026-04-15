@@ -7,16 +7,20 @@ export const getRosterArtistsForUser = async (userId) => {
     fetch(`${baseUrl}/genres`).then((res) => res.json()),
   ])
 
-  const userArtists = artists.filter((artist) => artist.userId === userId)
+  const userArtists = artists.filter(
+    (artist) => String(artist.userId) === String(userId)
+  )
 
   return userArtists.map((artist) => {
     const matchingArtistGenres = artistGenres.filter(
-      (artistGenre) => artistGenre.artistId === artist.id
+      (artistGenre) => String(artistGenre.artistId) === String(artist.id)
     )
 
     const genreNames = matchingArtistGenres
       .map((artistGenre) =>
-        genres.find((genre) => genre.id === artistGenre.genreId)
+        genres.find(
+          (genre) => String(genre.id) === String(artistGenre.genreId)
+        )
       )
       .filter(Boolean)
       .map((genre) => genre.name)
@@ -39,8 +43,12 @@ export const getAllGenres = async () => {
 }
 
 export const getArtistGenreLinksByArtistId = async (artistId) => {
-  const response = await fetch(`${baseUrl}/artistGenres?artistId=${artistId}`)
-  return response.json()
+  const response = await fetch(`${baseUrl}/artistGenres`)
+  const links = await response.json()
+
+  return links.filter(
+    (link) => String(link.artistId) === String(artistId)
+  )
 }
 
 export const updateArtist = async (artist) => {
@@ -74,14 +82,100 @@ export const replaceArtistGenres = async (artistId, selectedGenreIds) => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          artistId,
-          genreId,
+          artistId: String(artistId),
+          genreId: String(genreId),
         }),
       })
     )
   )
 }
+
 export const getTourDatesByArtistId = async (artistId) => {
-  const response = await fetch(`${baseUrl}/tourDates?artistId=${artistId}`)
+  const response = await fetch(`${baseUrl}/tourDates`)
+  const tourDates = await response.json()
+
+  return tourDates.filter(
+    (tourDate) => String(tourDate.artistId) === String(artistId)
+  )
+}
+
+export const createArtist = async (artist) => {
+  const response = await fetch(`${baseUrl}/artists`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(artist),
+  })
+
   return response.json()
+}
+export const deleteArtistGenreLinksByArtistId = async (artistId) => {
+  const existingLinks = await getArtistGenreLinksByArtistId(artistId)
+
+  await Promise.all(
+    existingLinks.map((link) =>
+      fetch(`${baseUrl}/artistGenres/${link.id}`, {
+        method: "DELETE",
+      })
+    )
+  )
+}
+
+export const deleteTourDatesByArtistId = async (artistId) => {
+  const tourDates = await getTourDatesByArtistId(artistId)
+
+  await Promise.all(
+    tourDates.map((tourDate) =>
+      fetch(`${baseUrl}/tourDates/${tourDate.id}`, {
+        method: "DELETE",
+      })
+    )
+  )
+}
+
+export const deleteArtistById = async (artistId) => {
+  const response = await fetch(`${baseUrl}/artists/${artistId}`, {
+    method: "DELETE",
+  })
+
+  return response
+}
+export const createTourDate = async (tourDate) => {
+  const response = await fetch(`${baseUrl}/tourDates`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(tourDate),
+  })
+
+  return response.json()
+}
+export const getAllArtistsWithGenres = async () => {
+  const [artists, artistGenres, genres] = await Promise.all([
+    fetch(`${baseUrl}/artists`).then((res) => res.json()),
+    fetch(`${baseUrl}/artistGenres`).then((res) => res.json()),
+    fetch(`${baseUrl}/genres`).then((res) => res.json()),
+  ])
+
+  return artists.map((artist) => {
+    const matchingArtistGenres = artistGenres.filter(
+      (artistGenre) => String(artistGenre.artistId) === String(artist.id)
+    )
+
+    const genreNames = matchingArtistGenres
+      .map((artistGenre) =>
+        genres.find(
+          (genre) => String(genre.id) === String(artistGenre.genreId)
+        )
+      )
+      .filter(Boolean)
+      .map((genre) => genre.name)
+
+    return {
+      ...artist,
+      genres: genreNames,
+    }
+  })
 }

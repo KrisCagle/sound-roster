@@ -1,29 +1,36 @@
 import { useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
-import { registerUser } from "../services/authService"
+import { getUserByEmail, registerUser } from "../services/authService"
 
 export const Register = ({ setCurrentUser }) => {
   const [newUser, setNewUser] = useState({
     fullName: "",
     email: "",
-    password: "",
   })
 
   const navigate = useNavigate()
-  
+
   const handleRegister = (e) => {
     e.preventDefault()
 
- registerUser(newUser).then((createdUser) => {
-  if (createdUser?.id) {
-    localStorage.setItem("sound_roster_user", JSON.stringify(createdUser))
-    setCurrentUser(createdUser)
-    navigate("/roster")
-  } else {
-    window.alert("Unable to create account")
+    getUserByEmail(newUser.email).then((existingUsers) => {
+      if (existingUsers.length > 0) {
+        window.alert("An account with that email already exists")
+        return
+      }
+
+      registerUser(newUser).then((createdUser) => {
+        if (createdUser?.id) {
+          localStorage.setItem("sound_roster_user", JSON.stringify(createdUser))
+          setCurrentUser(createdUser)
+          navigate("/roster")
+        } else {
+          window.alert("Unable to create account")
+        }
+      })
+    })
   }
-})
-  }
+
   return (
     <main className="min-h-screen flex items-center justify-center bg-gray-800">
       <section className="bg-gray-700 rounded-2xl border border-grey-400 p-10 w-full max-w-md">
@@ -51,7 +58,7 @@ export const Register = ({ setCurrentUser }) => {
             </div>
           </fieldset>
 
-          <fieldset className="mb-4">
+          <fieldset className="mb-6">
             <div className="form-group">
               <input
                 type="email"
@@ -61,21 +68,6 @@ export const Register = ({ setCurrentUser }) => {
                 }
                 className="w-full px-4 py-2 rounded-lg bg-blue-400 text-white placeholder-white focus:outline-none"
                 placeholder="Email address"
-                required
-              />
-            </div>
-          </fieldset>
-
-          <fieldset className="mb-6">
-            <div className="form-group">
-              <input
-                type="password"
-                value={newUser.password}
-                onChange={(e) =>
-                  setNewUser({ ...newUser, password: e.target.value })
-                }
-                className="w-full px-4 py-2 rounded-lg bg-blue-400 text-white placeholder-white focus:outline-none"
-                placeholder="Password"
                 required
               />
             </div>
