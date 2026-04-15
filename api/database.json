@@ -5,6 +5,11 @@
       "email": "kriscagle@gmail.com",
       "password": "Dobis123$",
       "id": "Q8zjwEq1Ul8"
+    },
+    {
+      "fullName": "Justice Calhoun",
+      "email": "justiceC@gmail.com",
+      "id": "OOcGhzkfh8E"
     }
   ],
   "artists": [
@@ -70,6 +75,33 @@
       "originCity": "Nashville, TN",
       "activeSince": 2020,
       "userId": "Q8zjwEq1Ul8"
+    },
+    {
+      "id": "7",
+      "name": "Harbor Saints",
+      "bio": "Americana trio blending warm harmonies, road worn storytelling, and roots driven arrangements.",
+      "photoUrl": "/images/artists/HarborSaints.jpg",
+      "originCity": "Memphis, TN",
+      "activeSince": 2021,
+      "userId": "OOcGhzkfh8E"
+    },
+    {
+      "id": "8",
+      "name": "Neon Revival",
+      "bio": "High energy synth pop act mixing retro textures with modern hooks and big live choruses.",
+      "photoUrl": "\\images\\artists\\NeonRevival.jpg",
+      "originCity": "Louisville, KY",
+      "activeSince": 2022,
+      "userId": "OOcGhzkfh8E"
+    },
+    {
+      "id": "9",
+      "name": "Cedar Vale",
+      "bio": "Indie rock band with jangly guitars, reflective lyrics, and a wide open heartland sound.",
+      "photoUrl": "/images/artists/CederVale.jpg",
+      "originCity": "Birmingham, AL",
+      "activeSince": 2020,
+      "userId": "OOcGhzkfh8E"
     }
   ],
   "tourDates": [
@@ -96,6 +128,46 @@
       "date": "2025-08-22",
       "ticketUrl": "https://masqueradeatlanta.com",
       "artistId": "2"
+    },
+    {
+      "id": "4",
+      "venue": "The Hi Tone",
+      "city": "Memphis, TN",
+      "date": "2026-07-12",
+      "ticketUrl": "https://example.com/harbor-saints-memphis",
+      "artistId": "7"
+    },
+    {
+      "id": "5",
+      "venue": "The Basement",
+      "city": "Nashville, TN",
+      "date": "2026-07-18",
+      "ticketUrl": "https://example.com/harbor-saints-nashville",
+      "artistId": "7"
+    },
+    {
+      "id": "6",
+      "venue": "Zanzabar",
+      "city": "Louisville, KY",
+      "date": "2026-08-02",
+      "ticketUrl": "https://example.com/neon-revival-louisville",
+      "artistId": "8"
+    },
+    {
+      "id": "7",
+      "venue": "The End",
+      "city": "Nashville, TN",
+      "date": "2026-08-09",
+      "ticketUrl": "https://example.com/neon-revival-nashville",
+      "artistId": "8"
+    },
+    {
+      "id": "8",
+      "venue": "Saturn",
+      "city": "Birmingham, AL",
+      "date": "2026-08-21",
+      "ticketUrl": "https://example.com/cedar-vale-birmingham",
+      "artistId": "9"
     }
   ],
   "genres": [
@@ -219,6 +291,46 @@
       "artistId": "uivEa_XazUM",
       "genreId": "5",
       "id": "pYhIa6yrpVQ"
+    },
+    {
+      "artistId": "7",
+      "genreId": "11",
+      "id": "UxXrz0ITHZw"
+    },
+    {
+      "artistId": "7",
+      "genreId": "8",
+      "id": "RjcjRZwZpIU"
+    },
+    {
+      "artistId": "8",
+      "genreId": "6",
+      "id": "1Kvu3CTmEc8"
+    },
+    {
+      "artistId": "8",
+      "genreId": "4",
+      "id": "wRb5RCmH75g"
+    },
+    {
+      "artistId": "8",
+      "genreId": "9",
+      "id": "Ms2plsIp8_Q"
+    },
+    {
+      "artistId": "9",
+      "genreId": "1",
+      "id": "fii1Epv2gDA"
+    },
+    {
+      "artistId": "9",
+      "genreId": "5",
+      "id": "--74yIWnGZ8"
+    },
+    {
+      "artistId": "9",
+      "genreId": "8",
+      "id": "3chwzalTxME"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
