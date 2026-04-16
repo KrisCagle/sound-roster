@@ -48,7 +48,7 @@ export const BrowseAll = ({ currentUser }) => {
             <article
               key={artist.id}
               style={{
-                border: "1px solid #ccc",
+                border: "1px solid #ff00ff",
                 padding: "16px",
                 marginBottom: "16px",
               }}

@@ -10,6 +10,11 @@
       "fullName": "Justice Calhoun",
       "email": "justiceC@gmail.com",
       "id": "OOcGhzkfh8E"
+    },
+    {
+      "fullName": "Josh Long",
+      "email": "JLong@MusicManager.com",
+      "id": "gR9hsrQn_ww"
     }
   ],
   "artists": [
@@ -102,6 +107,15 @@
       "originCity": "Birmingham, AL",
       "activeSince": 2020,
       "userId": "OOcGhzkfh8E"
+    },
+    {
+      "id": "Zdw7DV8sgpI",
+      "name": "The Ghost Outside",
+      "bio": "A deathcore band with guttural growls and dark breakdowns.",
+      "photoUrl": "/images/artists/TheGhostOutside.jpg",
+      "originCity": "New York, New York",
+      "activeSince": 2010,
+      "userId": "gR9hsrQn_ww"
     }
   ],
   "tourDates": [
@@ -168,6 +182,14 @@
       "date": "2026-08-21",
       "ticketUrl": "https://example.com/cedar-vale-birmingham",
       "artistId": "9"
+    },
+    {
+      "venue": "The Concourse",
+      "city": "Johnson City, TN",
+      "date": "2026-06-18",
+      "ticketUrl": "https://www.eventbrite.com/o/capones-18723070440",
+      "artistId": "4",
+      "id": "EVZg8WXqq-o"
     }
   ],
   "genres": [
@@ -331,6 +353,11 @@
       "artistId": "9",
       "genreId": "8",
       "id": "3chwzalTxME"
+    },
+    {
+      "artistId": "Zdw7DV8sgpI",
+      "genreId": "10",
+      "id": "nLnU3S2aR5g"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

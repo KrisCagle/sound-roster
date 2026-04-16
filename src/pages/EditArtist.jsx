@@ -8,7 +8,6 @@ import {
   replaceArtistGenres,
 } from "../services/artistService"
 
-
 export const EditArtist = ({ currentUser }) => {
   const { artistId } = useParams()
   const navigate = useNavigate()
@@ -77,195 +76,173 @@ export const EditArtist = ({ currentUser }) => {
     event.preventDefault()
     setIsSaving(true)
 
-    await updateArtist({
-      ...artist,
-      userId: artist.userId || currentUser?.id || "",
-    })
+    try {
+      await updateArtist({
+        ...artist,
+        userId: artist.userId || currentUser?.id || "",
+      })
 
-    await replaceArtistGenres(artist.id, selectedGenreIds)
+      await replaceArtistGenres(artist.id, selectedGenreIds)
 
-    navigate(`/artists/${artist.id}`)
+      navigate(`/artists/${artist.id}`)
+    } catch (error) {
+      console.error(error)
+      window.alert("Something went wrong while saving the artist.")
+    } finally {
+      setIsSaving(false)
+    }
   }
-  
 
   if (!currentUser) {
     return (
-      <main className="min-h-screen bg-neutral-600 px-6 py-10 text-white">
-        <section className="mx-auto max-w-5xl rounded-[4rem] border border-blue-400/70 bg-neutral-700/85 px-10 py-16 text-center shadow-[0_30px_80px_rgba(0,0,0,0.4)]">
-          <h1 className="text-4xl font-light">Edit Artist</h1>
-          <p className="mt-4 text-xl text-gray-300">
-            Please sign in to edit artists.
-          </p>
-        </section>
+      <main>
+        <h1>Edit Artist</h1>
+        <p>Please sign in to edit artists.</p>
       </main>
     )
   }
 
   if (isLoading) {
     return (
-      <main className="min-h-screen bg-neutral-600 px-6 py-10 text-white">
-        <section className="mx-auto max-w-5xl rounded-[4rem] border border-blue-400/70 bg-neutral-700/85 px-10 py-16 text-center shadow-[0_30px_80px_rgba(0,0,0,0.4)]">
-          <h1 className="text-4xl font-light">Loading artist...</h1>
-        </section>
+      <main>
+        <h1>Edit Artist</h1>
+        <p>Loading artist...</p>
       </main>
     )
   }
-  
 
   return (
-    <main className="min-h-screen bg-neutral-600 px-6 py-10 text-white">
-      <section className="mx-auto max-w-5xl rounded-[4rem] border border-blue-400/70 bg-neutral-700/85 px-8 py-10 shadow-[0_30px_80px_rgba(0,0,0,0.4)] md:px-12">
-        <div className="mb-10">
-          <h1 className="text-4xl font-light">Edit Artist</h1>
-          <p className="mt-2 text-lg text-gray-300">
-            Update artist details, image, and genres.
-          </p>
+    <main>
+      <h1>Edit Artist</h1>
+      <p>Update artist details, image, and genres.</p>
+
+      <form onSubmit={handleSubmit}>
+        <div>
+          <label htmlFor="name">Artist Name</label>
+          <br />
+          <input
+            id="name"
+            type="text"
+            name="name"
+            value={artist.name}
+            onChange={handleChange}
+            required
+          />
         </div>
 
-        <form onSubmit={handleSubmit} className="space-y-8">
-          <div className="grid gap-8 md:grid-cols-2">
-            <div>
-              <label className="mb-2 block text-lg font-semibold text-white">
-                Artist Name
-              </label>
-              <input
-                type="text"
-                name="name"
-                value={artist.name}
-                onChange={handleChange}
-                required
-                className="w-full rounded-2xl border border-blue-400/70 bg-white/10 px-4 py-3 text-white placeholder-gray-300 shadow-[0_10px_24px_rgba(0,0,0,0.2)] outline-none transition focus:border-blue-300"
-                placeholder="Enter artist name"
-              />
-            </div>
+        <br />
 
-            <div>
-              <label className="mb-2 block text-lg font-semibold text-white">
-                Origin City
-              </label>
-              <input
-                type="text"
-                name="originCity"
-                value={artist.originCity}
-                onChange={handleChange}
-                required
-                className="w-full rounded-2xl border border-blue-400/70 bg-white/10 px-4 py-3 text-white placeholder-gray-300 shadow-[0_10px_24px_rgba(0,0,0,0.2)] outline-none transition focus:border-blue-300"
-                placeholder="Nashville, TN"
-              />
-            </div>
+        <div>
+          <label htmlFor="originCity">Origin City</label>
+          <br />
+          <input
+            id="originCity"
+            type="text"
+            name="originCity"
+            value={artist.originCity}
+            onChange={handleChange}
+            required
+          />
+        </div>
 
-            <div>
-              <label className="mb-2 block text-lg font-semibold text-white">
-                Photo URL
-              </label>
-              <input
-                type="text"
-                name="photoUrl"
-                value={artist.photoUrl}
-                onChange={handleChange}
-                className="w-full rounded-2xl border border-blue-400/70 bg-white/10 px-4 py-3 text-white placeholder-gray-300 shadow-[0_10px_24px_rgba(0,0,0,0.2)] outline-none transition focus:border-blue-300"
-                placeholder="/images/artists/NovaReyes.jpg"
-              />
-            </div>
+        <br />
 
-            <div>
-              <label className="mb-2 block text-lg font-semibold text-white">
-                Active Since
-              </label>
-              <input
-                type="number"
-                name="activeSince"
-                value={artist.activeSince}
-                onChange={handleChange}
-                min="1900"
-                max="2100"
-                className="w-full rounded-2xl border border-blue-400/70 bg-white/10 px-4 py-3 text-white placeholder-gray-300 shadow-[0_10px_24px_rgba(0,0,0,0.2)] outline-none transition focus:border-blue-300"
-                placeholder="2020"
-              />
-            </div>
-          </div>
+        <div>
+          <label htmlFor="photoUrl">Photo URL</label>
+          <br />
+          <input
+            id="photoUrl"
+            type="text"
+            name="photoUrl"
+            value={artist.photoUrl}
+            onChange={handleChange}
+            placeholder="/images/artists/NovaReyes.jpg"
+          />
+        </div>
 
-          <div>
-            <label className="mb-2 block text-lg font-semibold text-white">
-              Bio
-            </label>
-            <textarea
-              name="bio"
-              value={artist.bio}
-              onChange={handleChange}
-              rows="5"
-              className="w-full rounded-2xl border border-blue-400/70 bg-white/10 px-4 py-3 text-white placeholder-gray-300 shadow-[0_10px_24px_rgba(0,0,0,0.2)] outline-none transition focus:border-blue-300"
-              placeholder="Write a short artist bio..."
-            />
-          </div>
+        <br />
 
-          <div>
-            <label className="mb-4 block text-lg font-semibold text-white">
-              Genres
-            </label>
-            <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3">
-              {genres.map((genre) => {
-                const isSelected = selectedGenreIds.includes(String(genre.id))
+        <div>
+          <label htmlFor="activeSince">Active Since</label>
+          <br />
+          <input
+            id="activeSince"
+            type="number"
+            name="activeSince"
+            value={artist.activeSince}
+            onChange={handleChange}
+            min="1900"
+            max="2100"
+          />
+        </div>
 
-                return (
-                  <label
-                    key={genre.id}
-                    className={`flex cursor-pointer items-center gap-3 rounded-2xl border px-4 py-3 shadow-[0_10px_24px_rgba(0,0,0,0.18)] transition ${
-                      isSelected
-                        ? "border-blue-300 bg-blue-400/20 text-white"
-                        : "border-blue-400/50 bg-white/10 text-gray-200 hover:bg-white/15"
-                    }`}
-                  >
-                    <input
-                      type="checkbox"
-                      checked={isSelected}
-                      onChange={() => handleGenreToggle(genre.id)}
-                      className="h-4 w-4 accent-blue-400"
-                    />
-                    <span>{genre.name}</span>
-                  </label>
-                )
-              })}
-            </div>
-          </div>
+        <br />
 
-          {artist.photoUrl ? (
-            <div>
-              <label className="mb-4 block text-lg font-semibold text-white">
-                Photo Preview
-              </label>
-              <div className="h-64 w-64 overflow-hidden rounded-2xl border border-blue-400/70 bg-neutral-700 shadow-[0_12px_30px_rgba(0,0,0,0.28)]">
-                <img
-                  src={artist.photoUrl}
-                  alt={artist.name}
-                  className="h-full w-full object-cover"
-                  onError={(e) => {
-                    e.target.src = "https://placehold.co/300x300"
-                  }}
-                />
+        <div>
+          <label htmlFor="bio">Bio</label>
+          <br />
+          <textarea
+            id="bio"
+            name="bio"
+            value={artist.bio}
+            onChange={handleChange}
+            rows="5"
+          />
+        </div>
+
+        <br />
+
+        <div>
+          <p>Genres</p>
+          {genres.map((genre) => {
+            const isSelected = selectedGenreIds.includes(String(genre.id))
+
+            return (
+              <div key={genre.id}>
+                <label>
+                  <input
+                    type="checkbox"
+                    checked={isSelected}
+                    onChange={() => handleGenreToggle(genre.id)}
+                  />
+                  {genre.name}
+                </label>
               </div>
+            )
+          })}
+        </div>
+
+        <br />
+
+        {artist.photoUrl ? (
+          <>
+            <div>
+              <p>Photo Preview</p>
+              <img
+                src={artist.photoUrl}
+                alt={artist.name}
+                width="250"
+                onError={(e) => {
+                  e.target.src = "https://placehold.co/300x300"
+                }}
+              />
             </div>
-          ) : null}
+            <br />
+          </>
+        ) : null}
 
-          <div className="flex flex-wrap gap-4 pt-2">
-            <button
-              type="submit"
-              disabled={isSaving}
-              className="rounded-full border border-blue-400/80 bg-white/10 px-8 py-3 text-lg font-semibold text-white shadow-[0_12px_30px_rgba(0,0,0,0.28)] transition-transform transition-shadow duration-150 ease-out hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(0,0,0,0.35)] disabled:cursor-not-allowed disabled:opacity-60"
-            >
-              {isSaving ? "Saving..." : "Save Changes"}
-            </button>
+        <button type="submit" disabled={isSaving}>
+          {isSaving ? "Saving..." : "Save Changes"}
+        </button>
 
-            <button
-              type="button"
-              onClick={() => navigate(`/artists/${artist.id}`)}
-              className="rounded-full border border-gray-400/70 bg-white/5 px-8 py-3 text-lg font-semibold text-gray-200 shadow-[0_12px_30px_rgba(0,0,0,0.22)] transition hover:bg-white/10"
-            >
-              Cancel
-            </button>
-          </div>
-        </form>
-      </section>
+        <button
+          type="button"
+          onClick={() => navigate(`/artists/${artist.id}`)}
+          style={{ marginLeft: "10px" }}
+        >
+          Cancel
+        </button>
+      </form>
     </main>
   )
 }
