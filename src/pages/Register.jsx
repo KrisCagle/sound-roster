@@ -50,6 +50,7 @@ export const Register = ({ setCurrentUser }) => {
           padding: "40px",
           width: "100%",
           maxWidth: "420px",
+          boxShadow: "5px 25px 35px rgba(0, 0, 0, 0.2)"
         }}
       >
         <form onSubmit={handleRegister}>

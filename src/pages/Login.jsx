@@ -32,16 +32,16 @@ export const Login = ({ setCurrentUser }) => {
       }}
     >
       <section
-        style={{
-          backgroundColor: "#aeb0b6",
-          border: "1px solid #00e1ff",
-          borderRadius: "16px",
-          padding: "40px",
-          width: "100%",
-          maxWidth: "420px",
-          boxShadow: 110,
-        }}
-      >
+  style={{
+    backgroundColor: "#aeb0b6",
+    border: "1px solid #00e1ff",
+    borderRadius: "16px",
+    padding: "40px",
+    width: "100%",
+    maxWidth: "420px",
+    boxShadow: "5px 25px 35px rgba(0, 0, 0, 0.2)"
+  }}
+>
         <form onSubmit={handleLogin}>
           <h1
             style={{
