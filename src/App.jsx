@@ -11,6 +11,7 @@ import { AddArtist } from "./pages/AddArtist"
 import { EditArtist } from "./pages/EditArtist"
 import { AddTourDate } from "./pages/AddTourDate"
 import { BrowseAll } from "./pages/BrowseAll"
+import { EditTourDate } from "./pages/EditTourDate"
 
 const AppRoutes = ({ currentUser, setCurrentUser }) => {
   const location = useLocation()
@@ -25,7 +26,7 @@ const AppRoutes = ({ currentUser, setCurrentUser }) => {
       ) : null}
 
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home currentUser={currentUser} />} />
         <Route
           path="/login"
           element={<Login setCurrentUser={setCurrentUser} />}
@@ -58,6 +59,10 @@ const AppRoutes = ({ currentUser, setCurrentUser }) => {
           path="/artists/:artistId/tourdates/new"
           element={<AddTourDate currentUser={currentUser} />}
         />
+      <Route
+          path="/artists/:artistId/tourdates/:tourDateId/edit"
+          element={<EditTourDate currentUser={currentUser} />}
+        />  
       </Routes>
     </>
   )

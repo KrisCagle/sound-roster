@@ -10,6 +10,11 @@
       "fullName": "Justice Calhoun",
       "email": "justiceC@gmail.com",
       "id": "OOcGhzkfh8E"
+    },
+    {
+      "fullName": "Josh Long",
+      "email": "JLong@MusicManager.com",
+      "id": "gR9hsrQn_ww"
     }
   ],
   "artists": [
@@ -102,6 +107,51 @@
       "originCity": "Birmingham, AL",
       "activeSince": 2020,
       "userId": "OOcGhzkfh8E"
+    },
+    {
+      "id": "Zdw7DV8sgpI",
+      "name": "The Ghost Outside",
+      "bio": "A deathcore band with guttural growls and dark breakdowns.",
+      "photoUrl": "/images/artists/TheGhostOutside.jpg",
+      "originCity": "New York, New York",
+      "activeSince": 2010,
+      "userId": "gR9hsrQn_ww"
+    },
+    {
+      "name": "Travesty",
+      "bio": "The heaviest band in California. Crushing lows and an anger that just keeps growing.  ",
+      "photoUrl": "/images/artists/Travesty.jpg",
+      "originCity": "Los Angeles, California",
+      "activeSince": 1999,
+      "userId": "gR9hsrQn_ww",
+      "id": "snHsBtTyGrg"
+    },
+    {
+      "name": "DJ Drips",
+      "bio": "The most sultry of DJ's in the south. Smooth vibes and electric electronic hits.",
+      "photoUrl": "/images/artists/DJDrips.jpg",
+      "originCity": "Daytona, Florida",
+      "activeSince": 2017,
+      "userId": "gR9hsrQn_ww",
+      "id": "iLp6AlRoHXI"
+    },
+    {
+      "name": "Chris Whit and The Blind Men",
+      "bio": "The band that invented Country and Western. Both of the best genres of music.",
+      "photoUrl": "/images/artists/ChrisWhitandTheBlindMen.jpg",
+      "originCity": "Dallas, Texas",
+      "activeSince": 2000,
+      "userId": "OOcGhzkfh8E",
+      "id": "N0NFvdSRRDU"
+    },
+    {
+      "id": "vtP5KVIqk1g",
+      "name": "Cup of Jazz",
+      "bio": "Hot, flashy and the best Jazz in the south. Nothing can stop this group of fine musicians and their love of the hits.",
+      "photoUrl": "/images/artists/CupofJazz.jpg",
+      "originCity": "New Orleans, Lousiana",
+      "activeSince": 2004,
+      "userId": "OOcGhzkfh8E"
     }
   ],
   "tourDates": [
@@ -168,6 +218,62 @@
       "date": "2026-08-21",
       "ticketUrl": "https://example.com/cedar-vale-birmingham",
       "artistId": "9"
+    },
+    {
+      "venue": "The Concourse",
+      "city": "Johnson City, TN",
+      "date": "2026-06-18",
+      "ticketUrl": "https://www.eventbrite.com/o/capones-18723070440",
+      "artistId": "4",
+      "id": "EVZg8WXqq-o"
+    },
+    {
+      "id": "2N7X6CIYUEo",
+      "venue": "Tiny's Hi Dive",
+      "city": "Los Angeles, California",
+      "date": "2026-11-18",
+      "ticketUrl": "https://tinyshidive.com/",
+      "artistId": "snHsBtTyGrg"
+    },
+    {
+      "venue": "The 509 Lounge",
+      "city": "Daytona, Florida",
+      "date": "2026-04-30",
+      "ticketUrl": "https://www.509lounge.com/",
+      "artistId": "iLp6AlRoHXI",
+      "id": "YAmd3dHdffE"
+    },
+    {
+      "venue": "Texas State Fair",
+      "city": "Dallas, Texas",
+      "date": "2026-05-21",
+      "ticketUrl": "https://bigtex.com/",
+      "artistId": "N0NFvdSRRDU",
+      "id": "oyxl-kVbQDA"
+    },
+    {
+      "venue": "The Jazz Playhouse",
+      "city": "New Orleans",
+      "date": "2026-05-24",
+      "ticketUrl": "https://www.thejazzplayhouse.com/",
+      "artistId": "vtP5KVIqk1g",
+      "id": "5OJb5bgcEtk"
+    },
+    {
+      "venue": "Bridgestone Arena",
+      "city": "Nashville, TN",
+      "date": "2026-06-12",
+      "ticketUrl": "https://www.bridgestonearena.com/",
+      "artistId": "uivEa_XazUM",
+      "id": "GKs2tocH4I4"
+    },
+    {
+      "venue": "The 5 Spot",
+      "city": "Nashville, TN",
+      "date": "2026-07-06",
+      "ticketUrl": "https://the5spotnashville.com/",
+      "artistId": "3",
+      "id": "7IHas9lUVjw"
     }
   ],
   "genres": [
@@ -214,19 +320,13 @@
     {
       "id": "11",
       "name": "Americana"
+    },
+    {
+      "id": "12",
+      "name": "Jazz"
     }
   ],
   "artistGenres": [
-    {
-      "id": "1",
-      "artistId": "1",
-      "genreId": "1"
-    },
-    {
-      "id": "2",
-      "artistId": "1",
-      "genreId": "2"
-    },
     {
       "id": "4",
       "artistId": "3",
@@ -293,16 +393,6 @@
       "id": "pYhIa6yrpVQ"
     },
     {
-      "artistId": "7",
-      "genreId": "11",
-      "id": "UxXrz0ITHZw"
-    },
-    {
-      "artistId": "7",
-      "genreId": "8",
-      "id": "RjcjRZwZpIU"
-    },
-    {
       "artistId": "8",
       "genreId": "6",
       "id": "1Kvu3CTmEc8"
@@ -331,6 +421,61 @@
       "artistId": "9",
       "genreId": "8",
       "id": "3chwzalTxME"
+    },
+    {
+      "artistId": "Zdw7DV8sgpI",
+      "genreId": "10",
+      "id": "nLnU3S2aR5g"
+    },
+    {
+      "artistId": "snHsBtTyGrg",
+      "genreId": "10",
+      "id": "GpcSaGJUpA8"
+    },
+    {
+      "artistId": "iLp6AlRoHXI",
+      "genreId": "6",
+      "id": "L95E4icu7dw"
+    },
+    {
+      "artistId": "N0NFvdSRRDU",
+      "genreId": "7",
+      "id": "2dLVEquEGps"
+    },
+    {
+      "artistId": "N0NFvdSRRDU",
+      "genreId": "11",
+      "id": "-L3_yxCm-lE"
+    },
+    {
+      "artistId": "N0NFvdSRRDU",
+      "genreId": "5",
+      "id": "aTd64_d2Cpw"
+    },
+    {
+      "artistId": "vtP5KVIqk1g",
+      "genreId": "12",
+      "id": "PN8nkHwvIdk"
+    },
+    {
+      "artistId": "7",
+      "genreId": "11",
+      "id": "VqwiQBBCIHE"
+    },
+    {
+      "artistId": "7",
+      "genreId": "8",
+      "id": "X5HmY8I37s4"
+    },
+    {
+      "artistId": "1",
+      "genreId": "1",
+      "id": "m_dajbB0oWQ"
+    },
+    {
+      "artistId": "1",
+      "genreId": "2",
+      "id": "8xH5LQRUkiE"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

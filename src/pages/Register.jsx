@@ -32,52 +32,123 @@ export const Register = ({ setCurrentUser }) => {
   }
 
   return (
-    <main className="min-h-screen flex items-center justify-center bg-gray-800">
-      <section className="bg-gray-700 rounded-2xl border border-grey-400 p-10 w-full max-w-md">
+    <main
+      style={{
+        minHeight: "100vh",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: "#7b7e83",
+        padding: "20px",
+      }}
+    >
+      <section
+        style={{
+          backgroundColor: "#aeb0b6",
+          border: "1px solid #00e1ff",
+          borderRadius: "16px",
+          padding: "40px",
+          width: "100%",
+          maxWidth: "420px",
+          boxShadow: "5px 25px 35px rgba(0, 0, 0, 0.2)"
+        }}
+      >
         <form onSubmit={handleRegister}>
-          <h1 className="text-3xl font-bold text-white text-center mb-2">
+          <h1
+            style={{
+              fontSize: "2rem",
+              fontWeight: "bold",
+              color: "white",
+              textAlign: "center",
+              marginBottom: "8px",
+            }}
+          >
             SoundRoster
           </h1>
-          <h2 className="text-lg text-gray-300 text-center mb-8">
+
+          <h2
+            style={{
+              fontSize: "1.1rem",
+              color: "#e2e8f0",
+              textAlign: "center",
+              marginBottom: "32px",
+            }}
+          >
             Create your account
           </h2>
 
-          <fieldset className="mb-4">
-            <div className="form-group">
+          <fieldset
+            style={{
+              marginBottom: "16px",
+              border: "none",
+              padding: 0,
+            }}
+          >
+            <div>
               <input
                 type="text"
                 value={newUser.fullName}
                 onChange={(e) =>
                   setNewUser({ ...newUser, fullName: e.target.value })
                 }
-                className="w-full px-4 py-2 rounded-lg bg-blue-400 text-white placeholder-white focus:outline-none"
                 placeholder="Full name"
                 required
                 autoFocus
+                style={{
+                  width: "100%",
+                  padding: "12px",
+                  borderRadius: "8px",
+                  border: "1px solid #a0aec0",
+                  fontSize: "1rem",
+                  boxSizing: "border-box",
+                }}
               />
             </div>
           </fieldset>
 
-          <fieldset className="mb-6">
-            <div className="form-group">
+          <fieldset
+            style={{
+              marginBottom: "24px",
+              border: "none",
+              padding: 0,
+            }}
+          >
+            <div>
               <input
                 type="email"
                 value={newUser.email}
                 onChange={(e) =>
                   setNewUser({ ...newUser, email: e.target.value })
                 }
-                className="w-full px-4 py-2 rounded-lg bg-blue-400 text-white placeholder-white focus:outline-none"
                 placeholder="Email address"
                 required
+                style={{
+                  width: "100%",
+                  padding: "12px",
+                  borderRadius: "8px",
+                  border: "1px solid #a0aec0",
+                  fontSize: "1rem",
+                  boxSizing: "border-box",
+                }}
               />
             </div>
           </fieldset>
 
-          <fieldset>
-            <div className="form-group">
+          <fieldset style={{ border: "none", padding: 0 }}>
+            <div>
               <button
                 type="submit"
-                className="w-full py-2 rounded-lg bg-white text-blue-500 font-semibold hover:bg-gray-100 transition"
+                style={{
+                  width: "100%",
+                  padding: "12px",
+                  borderRadius: "8px",
+                  border: "none",
+                  backgroundColor: "white",
+                  color: "#3182ce",
+                  fontSize: "1rem",
+                  fontWeight: "bold",
+                  cursor: "pointer",
+                }}
               >
                 Sign up
               </button>
@@ -85,10 +156,19 @@ export const Register = ({ setCurrentUser }) => {
           </fieldset>
         </form>
 
-        <section className="text-center mt-6">
+        <section
+          style={{
+            textAlign: "center",
+            marginTop: "24px",
+          }}
+        >
           <Link
             to="/login"
-            className="text-gray-300 hover:text-white text-sm"
+            style={{
+              color: "#e2e8f0",
+              fontSize: "0.9rem",
+              textDecoration: "none",
+            }}
           >
             Already have an account? Sign in
           </Link>
