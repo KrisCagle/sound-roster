@@ -1,28 +1,20 @@
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { useNavigate, useParams } from "react-router-dom"
-import { createTourDate, getArtistById } from "../services/artistService"
+import { createTourDate } from "../services/artistService"
 
 export const AddTourDate = ({ currentUser }) => {
   const { artistId } = useParams()
   const navigate = useNavigate()
 
-  const [artist, setArtist] = useState(null)
   const [tourDate, setTourDate] = useState({
     venue: "",
     city: "",
     date: "",
     ticketUrl: "",
+    artistId: Number(artistId),
   })
 
-  const [isLoading, setIsLoading] = useState(true)
   const [isSaving, setIsSaving] = useState(false)
-
-  useEffect(() => {
-    getArtistById(artistId).then((artistData) => {
-      setArtist(artistData)
-      setIsLoading(false)
-    })
-  }, [artistId])
 
   const handleChange = (event) => {
     const { name, value } = event.target
@@ -46,7 +38,7 @@ export const AddTourDate = ({ currentUser }) => {
     try {
       await createTourDate({
         ...tourDate,
-        artistId: String(artistId),
+        artistId: Number(artistId),
       })
 
       navigate(`/artists/${artistId}`)
@@ -59,95 +51,124 @@ export const AddTourDate = ({ currentUser }) => {
   }
 
   if (!currentUser) {
-    return <h2>Please sign in to add tour dates.</h2>
-  }
-
-  if (isLoading) {
-    return <h2>Loading artist...</h2>
-  }
-
-  if (!artist) {
-    return <h2>Artist not found.</h2>
+    return (
+      <main className="min-h-screen bg-neutral-600 px-4 py-6 text-white sm:px-6 sm:py-8 md:px-8 md:py-10">
+        <section className="mx-auto max-w-5xl rounded-[2rem] border border-blue-400/70 bg-white/10 px-5 py-10 text-center shadow-[0_30px_80px_rgba(0,0,0,0.35)] backdrop-blur-sm sm:rounded-[2.5rem] sm:px-8 sm:py-12 md:rounded-[4rem] md:px-10 md:py-16">
+          <h1 className="text-3xl font-light sm:text-4xl">Add Tour Date</h1>
+          <p className="mt-4 text-base text-gray-300 sm:text-lg md:text-xl">
+            Please sign in to add tour dates.
+          </p>
+        </section>
+      </main>
+    )
   }
 
   return (
-    <main>
-      <h1>Add Tour Date</h1>
-      <p>Add a new show for {artist.name}</p>
-
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="venue">Venue</label>
-          <br />
-          <input
-            id="venue"
-            type="text"
-            name="venue"
-            value={tourDate.venue}
-            onChange={handleChange}
-            required
-          />
+    <main className="min-h-screen bg-neutral-600 px-4 py-6 text-white sm:px-6 sm:py-8 md:px-8 md:py-10">
+      <section className="mx-auto max-w-5xl rounded-[2rem] border border-blue-400/70 bg-neutral-700/85 px-5 py-6 shadow-[0_30px_80px_rgba(0,0,0,0.4)] backdrop-blur-sm sm:rounded-[2.5rem] sm:px-8 sm:py-8 md:rounded-[4rem] md:px-10 md:py-10">
+        <div className="mb-8 sm:mb-10">
+          <h1 className="text-3xl font-light text-white sm:text-4xl">
+            Add Tour Date
+          </h1>
+          <p className="mt-2 text-base text-gray-300 sm:text-lg md:text-xl">
+            Add a new show date for this artist.
+          </p>
         </div>
 
-        <br />
+        <form onSubmit={handleSubmit} className="space-y-8">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+            <div>
+              <label
+                htmlFor="venue"
+                className="mb-2 block text-sm font-semibold uppercase tracking-wide text-blue-200"
+              >
+                Venue
+              </label>
+              <input
+                id="venue"
+                type="text"
+                name="venue"
+                value={tourDate.venue}
+                onChange={handleChange}
+                required
+                className="w-full rounded-2xl border border-blue-400/70 bg-white/10 px-4 py-3 text-white placeholder:text-gray-400 shadow-[0_10px_24px_rgba(0,0,0,0.2)] outline-none transition focus:border-blue-300 focus:ring-2 focus:ring-blue-300/40"
+              />
+            </div>
 
-        <div>
-          <label htmlFor="city">City</label>
-          <br />
-          <input
-            id="city"
-            type="text"
-            name="city"
-            value={tourDate.city}
-            onChange={handleChange}
-            required
-          />
-        </div>
+            <div>
+              <label
+                htmlFor="city"
+                className="mb-2 block text-sm font-semibold uppercase tracking-wide text-blue-200"
+              >
+                City
+              </label>
+              <input
+                id="city"
+                type="text"
+                name="city"
+                value={tourDate.city}
+                onChange={handleChange}
+                required
+                className="w-full rounded-2xl border border-blue-400/70 bg-white/10 px-4 py-3 text-white placeholder:text-gray-400 shadow-[0_10px_24px_rgba(0,0,0,0.2)] outline-none transition focus:border-blue-300 focus:ring-2 focus:ring-blue-300/40"
+              />
+            </div>
 
-        <br />
+            <div>
+              <label
+                htmlFor="date"
+                className="mb-2 block text-sm font-semibold uppercase tracking-wide text-blue-200"
+              >
+                Date
+              </label>
+              <input
+                id="date"
+                type="date"
+                name="date"
+                value={tourDate.date}
+                onChange={handleChange}
+                required
+                className="w-full rounded-2xl border border-blue-400/70 bg-white/10 px-4 py-3 text-white [color-scheme:dark] shadow-[0_10px_24px_rgba(0,0,0,0.2)] outline-none transition focus:border-blue-300 focus:ring-2 focus:ring-blue-300/40"
+              />
+            </div>
 
-        <div>
-          <label htmlFor="date">Date</label>
-          <br />
-          <input
-            id="date"
-            type="date"
-            name="date"
-            value={tourDate.date}
-            onChange={handleChange}
-            required
-          />
-        </div>
+            <div>
+              <label
+                htmlFor="ticketUrl"
+                className="mb-2 block text-sm font-semibold uppercase tracking-wide text-blue-200"
+              >
+                Ticket URL
+              </label>
+              <input
+                id="ticketUrl"
+                type="url"
+                name="ticketUrl"
+                value={tourDate.ticketUrl}
+                onChange={handleChange}
+                placeholder="https://..."
+                className="w-full rounded-2xl border border-blue-400/70 bg-white/10 px-4 py-3 text-white placeholder:text-gray-400 shadow-[0_10px_24px_rgba(0,0,0,0.2)] outline-none transition focus:border-blue-300 focus:ring-2 focus:ring-blue-300/40"
+              />
+            </div>
+          </div>
 
-        <br />
+          <div className="flex flex-col gap-4 pt-2 sm:flex-row">
+            <button
+              type="submit"
+              disabled={isSaving}
+              className="inline-flex min-h-[52px] w-full items-center justify-center rounded-full border border-blue-400/80 bg-white/10 px-6 py-3 text-base font-semibold text-white shadow-[0_12px_30px_rgba(0,0,0,0.28)] transition-transform transition-shadow duration-150 ease-out hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(0,0,0,0.35)] disabled:cursor-not-allowed disabled:opacity-70 sm:w-auto"
+            >
+              {isSaving ? "Saving..." : "Create Tour Date"}
+            </button>
 
-        <div>
-          <label htmlFor="ticketUrl">Ticket URL</label>
-          <br />
-          <input
-            id="ticketUrl"
-            type="text"
-            name="ticketUrl"
-            value={tourDate.ticketUrl}
-            onChange={handleChange}
-            placeholder="https://example.com/tickets"
-          />
-        </div>
-
-        <br />
-
-        <button type="submit" disabled={isSaving}>
-          {isSaving ? "Saving..." : "Add Tour Date"}
-        </button>
-
-        <button
-          type="button"
-          onClick={() => navigate(`/artists/${artistId}`)}
-          style={{ marginLeft: "10px" }}
-        >
-          Cancel
-        </button>
-      </form>
+            <button
+              type="button"
+              onClick={() => navigate(`/artists/${artistId}`)}
+              className="inline-flex min-h-[52px] w-full items-center justify-center rounded-full border border-white/20 bg-black/10 px-6 py-3 text-base font-semibold text-white transition hover:bg-black/20 sm:w-auto"
+            >
+              Cancel
+            </button>
+          </div>
+        </form>
+      </section>
     </main>
   )
 }
