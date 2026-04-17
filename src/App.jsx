@@ -26,7 +26,7 @@ const AppRoutes = ({ currentUser, setCurrentUser }) => {
       ) : null}
 
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home currentUser={currentUser} />} />
         <Route
           path="/login"
           element={<Login setCurrentUser={setCurrentUser} />}
