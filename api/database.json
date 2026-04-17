@@ -161,7 +161,7 @@
       "city": "Nashville, TN",
       "date": "2025-08-14",
       "ticketUrl": "https://ryman.com",
-      "artistId": "1"
+      "artistId": 1
     },
     {
       "id": "2",
@@ -220,12 +220,12 @@
       "artistId": "9"
     },
     {
+      "id": "EVZg8WXqq-o",
       "venue": "The Concourse",
       "city": "Johnson City, TN",
       "date": "2026-06-18",
       "ticketUrl": "https://www.eventbrite.com/o/capones-18723070440",
-      "artistId": "4",
-      "id": "EVZg8WXqq-o"
+      "artistId": "4"
     },
     {
       "id": "2N7X6CIYUEo",
