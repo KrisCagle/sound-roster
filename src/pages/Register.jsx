@@ -48,7 +48,7 @@ return (
             <div>
               <label
               htmlFor="fullName"
-              className="mh-2 block text-sm font-semibold uppercase tracking-wide text-blue-200">
+              className="mb-2 block text-sm font-semibold uppercase tracking-wide text-blue-200">
                 Full Name
               </label>
               <input
@@ -69,7 +69,7 @@ return (
             <div>
               <label
               htmlFor="email"
-              className="mb-2 block text font-semibold uppercase tracking-wide text-blue-200">
+              className="mb-2 block text-sm font-semibold uppercase tracking-wide text-blue-200">
                 Email Address
               </label>
               <input

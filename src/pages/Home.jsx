@@ -14,11 +14,11 @@ export const Home = ({ currentUser }) => {
           <div className="relative rounded-[2rem] border border-blue-400/70 bg-neutral-700/90 px-5 py-10 shadow-[0_20px_80px_rgba(0,0,0,0.35)] backdrop-blur-sm sm:rounded-[2.5rem] sm:px-8 sm:py-12 md:rounded-[3rem] md:px-16 md:py-20">
             <div className="flex flex-col items-center text-center">
               <h1 className="max-w-2xl text-3xl font-light leading-tight sm:text-4xl md:text-5xl lg:text-6xl">
-                Manage your artist roster, all in one place.
+                Manage your artists, tour dates, and outreach all in one place.
               </h1>
 
               <p className="mt-6 max-w-2xl text-base font-light leading-relaxed text-gray-300 sm:mt-8 sm:text-lg md:text-2xl lg:text-3xl">
-                SoundRoster helps music managers track artists, genres, and tour dates.
+                SoundRoster is designed for managers balancing artists, schedules, and relationships.
               </p>
 
               <Link
