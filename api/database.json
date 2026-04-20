@@ -15,6 +15,11 @@
       "fullName": "Josh Long",
       "email": "JLong@MusicManager.com",
       "id": "gR9hsrQn_ww"
+    },
+    {
+      "fullName": "Dave",
+      "email": "Dave@email.com",
+      "id": "nor1BVcTZkU"
     }
   ],
   "artists": [
@@ -152,6 +157,24 @@
       "originCity": "New Orleans, Lousiana",
       "activeSince": 2004,
       "userId": "OOcGhzkfh8E"
+    },
+    {
+      "id": "TZrx87tzdrw",
+      "name": "Dave",
+      "bio": "Dave rips on the CDJ's and is a hero to all. Legendary status.",
+      "photoUrl": "/images/artists/Dave.jpg",
+      "originCity": "Atlanta, GA",
+      "activeSince": 2005,
+      "userId": "Q8zjwEq1Ul8"
+    },
+    {
+      "id": "-G0q5e1McTg",
+      "name": "DAVE THE DJ",
+      "bio": "",
+      "photoUrl": "",
+      "originCity": "Nashville",
+      "activeSince": 2024,
+      "userId": "nor1BVcTZkU"
     }
   ],
   "tourDates": [
@@ -274,6 +297,78 @@
       "ticketUrl": "https://the5spotnashville.com/",
       "artistId": "3",
       "id": "7IHas9lUVjw"
+    },
+    {
+      "venue": "Bridgestone Arena",
+      "city": "Nashville, TN",
+      "date": "2026-04-25",
+      "ticketUrl": "https://ryman.com",
+      "artistId": null,
+      "id": "ZN9lvkXlW0E"
+    },
+    {
+      "venue": "The Ryman",
+      "city": "Nashville, TN",
+      "date": "2026-04-30",
+      "ticketUrl": "https://ryman.com",
+      "artistId": null,
+      "id": "D9KbyRRIWoU"
+    },
+    {
+      "venue": "The Ryman Auditorium",
+      "city": "nashville",
+      "date": "2026-04-24",
+      "ticketUrl": "",
+      "artistId": 1,
+      "id": "ga-G885jIys"
+    },
+    {
+      "venue": "gilbery",
+      "city": "Idaho",
+      "date": "2026-05-01",
+      "ticketUrl": "",
+      "artistId": "TZrx87tzdrw",
+      "id": "nGT6CRJzcGo"
+    },
+    {
+      "venue": "RocketTown",
+      "city": "Nashville",
+      "date": "2026-05-25",
+      "ticketUrl": "",
+      "artistId": 3,
+      "id": "GQbi1zKBzwY"
+    },
+    {
+      "venue": "Sounds and Grounds",
+      "city": "Memphis",
+      "date": "2026-04-26",
+      "ticketUrl": "",
+      "artistId": "-G0q5e1McTg",
+      "id": "FdHM_yZhqf4"
+    },
+    {
+      "id": "SgOcxzbIjjE",
+      "venue": "The Ryman",
+      "city": "Nashville",
+      "date": "2026-05-09",
+      "ticketUrl": "https://ryman.com",
+      "artistId": null
+    },
+    {
+      "id": "llHC6HzjO40",
+      "venue": "The Ryman Auditorium",
+      "city": "Nashville",
+      "date": "2026-04-24",
+      "ticketUrl": "https://ryman.com",
+      "artistId": "-G0q5e1McTg"
+    },
+    {
+      "id": "mW2WxbytoiU",
+      "venue": "Tiny's Hi Dive",
+      "city": "Nashville",
+      "date": "2026-05-12",
+      "ticketUrl": "https://www.eventbrite.com/o/capones-18723070440",
+      "artistId": "-G0q5e1McTg"
     }
   ],
   "genres": [
@@ -476,6 +571,26 @@
       "artistId": "1",
       "genreId": "2",
       "id": "8xH5LQRUkiE"
+    },
+    {
+      "artistId": "TZrx87tzdrw",
+      "genreId": "6",
+      "id": "QNi8Q8LFrnY"
+    },
+    {
+      "artistId": "TZrx87tzdrw",
+      "genreId": "3",
+      "id": "L4DzXiXemKM"
+    },
+    {
+      "artistId": "-G0q5e1McTg",
+      "genreId": "1",
+      "id": "OHCmNbxMbFg"
+    },
+    {
+      "artistId": "-G0q5e1McTg",
+      "genreId": "10",
+      "id": "HIWB-ryZqsI"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

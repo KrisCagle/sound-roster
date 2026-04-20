@@ -3,15 +3,18 @@ import { useNavigate, useParams } from "react-router-dom"
 import { createTourDate } from "../services/artistService"
 
 export const AddTourDate = ({ currentUser }) => {
-  const { artistId } = useParams()
-  const navigate = useNavigate()
+const navigate = useNavigate()
+const { artistId } = useParams()
+const normalizedArtistId = Number.isNaN(Number(artistId))
+  ? artistId
+  : Number(artistId)
 
   const [tourDate, setTourDate] = useState({
     venue: "",
     city: "",
     date: "",
     ticketUrl: "",
-    artistId: Number(artistId),
+    artistId: normalizedArtistId
   })
 
   const [isSaving, setIsSaving] = useState(false)
@@ -38,7 +41,7 @@ export const AddTourDate = ({ currentUser }) => {
     try {
       await createTourDate({
         ...tourDate,
-        artistId: Number(artistId),
+        artistId: normalizedArtistId,
       })
 
       navigate(`/artists/${artistId}`)
