@@ -8,6 +8,7 @@ import {
   deleteArtistGenreLinksByArtistId,
   deleteTourDatesByArtistId,
   deleteArtistById,
+  deleteTourDateById,
 } from "../services/artistService"
 
 export const ArtistProfile = ({ currentUser }) => {
@@ -72,6 +73,25 @@ export const ArtistProfile = ({ currentUser }) => {
     await deleteArtistById(artist.id)
 
     navigate("/roster")
+  }
+
+  const handleDeleteTourDate = async (tourDateId, venue) => {
+    if (!isOwner) {
+      window.alert("Only the owner can delete this tour date.")
+      return
+    }
+
+    const confirmed = window.confirm(
+      `Are you sure you want to delete the tour date for ${venue}?`
+    )
+
+    if (!confirmed) return
+
+    await deleteTourDateById(tourDateId)
+
+    setTourDates((prevState) =>
+      prevState.filter((tourDate) => String(tourDate.id) !== String(tourDateId))
+    )
   }
 
   if (!currentUser) {
@@ -225,25 +245,36 @@ export const ArtistProfile = ({ currentUser }) => {
                             {formatDate(tourDate.date)}
                           </p>
 
-                          <a
-                            href={tourDate.ticketUrl}
-                            target="_blank"
-                            rel="noreferrer"
-                            className="mt-2 inline-block text-blue-300 hover:text-white"
-                          >
-                            Tickets
-                          </a>
+                          {tourDate.ticketUrl ? (
+                        <a
+                          href={tourDate.ticketUrl}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="mt-2 inline-block text-blue-300 hover:text-white"
+                        >
+                          Tickets
+                        </a>
+                      ) : null}
 
                           {isOwner ? (
-                            <>
-                              <br />
+                            <div className="mt-2 flex flex-col gap-2 md:items-end">
                               <Link
                                 to={`/artists/${artist.id}/tourdates/${tourDate.id}/edit`}
-                                className="mt-2 inline-block text-blue-300 hover:text-white"
+                                className="inline-block text-blue-300 hover:text-white"
                               >
                                 Edit Tour Date
                               </Link>
-                            </>
+
+                              <button
+                                type="button"
+                                onClick={() =>
+                                  handleDeleteTourDate(tourDate.id, tourDate.venue)
+                                }
+                                className="inline-block text-red-300 transition hover:text-white"
+                              >
+                                Delete Tour Date
+                              </button>
+                            </div>
                           ) : null}
                         </div>
                       </div>
