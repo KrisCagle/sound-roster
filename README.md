@@ -1,21 +1,27 @@
 # SoundRoster
 
-SoundRoster is a music management web app for tracking artists, genres, and tour dates in one place.
+SoundRoster is a music management web app built for managers who need one place to organize artists, tour dates, and artist details.
 
 ## Overview
 
-This project is built for music managers who need a clean way to manage a roster of artists, browse profiles, and keep basic artist information organized.
+SoundRoster helps music managers manage a roster of artists, browse profiles, create and edit artist records, and track tour dates from a single dashboard.
 
 The current version includes:
 
-- User registration and login
+- User registration
+- Email-based login
 - Persistent login state with local storage
 - A branded landing page
-- A navigation bar with logo and account menu
-- A **My Roster** page connected to a JSON Server database
-- Artist photo cards with artist names, origin city, and genre tags
+- A responsive navigation bar with logo, account menu, and mobile hamburger menu
+- A **My Roster** page for artists owned by the logged-in manager
+- A **Browse All** page for viewing every artist in the system
+- Search by artist name on **Browse All**
+- Filter by genre on **Browse All**
+- Artist profile pages with genre tags, bio, metadata, and tour dates
+- Add, edit, and delete functionality for artists
+- Add, edit, and delete functionality for tour dates
+- Owner-based permissions for artist and tour date management
 - Artist-to-genre relationships using a join table
-- Routing for future pages like **Add Artist**, **Artist Profile**, and **Browse All**
 
 ---
 
@@ -34,19 +40,22 @@ The current version includes:
 ### Authentication
 Users can:
 - Register for an account
-- Log in with email and password
+- Log in with email
 - Stay logged in using local storage
-- Log out from the navigation dropdown
+- Log out from the navigation menu
 
 ### Navigation
 The app currently includes:
 - **Home**
+- **Login**
+- **Register**
 - **My Roster**
 - **Browse All**
 - **Artist Profile**
 - **Add Artist**
 - **Edit Artist**
 - **Add Tour Date**
+- **Edit Tour Date**
 
 ### My Roster
 The **My Roster** page:
@@ -55,7 +64,46 @@ The **My Roster** page:
 - Displays artist photo cards
 - Shows artist name
 - Shows artist origin city
-- Shows genre bubbles based on `artistGenres` + `genres`
+- Shows genre tags
+- Links each card to the full artist profile
+
+### Browse All
+The **Browse All** page:
+- Displays all artists in the system
+- Supports real-time search by artist name
+- Supports filtering by genre
+- Allows genre pills to act as filter controls
+- Shows artist cards with photo, name, city, active year, bio, and genres
+
+### Artist Profiles
+The **Artist Profile** page:
+- Displays the artist image, name, genres, city, active year, and bio
+- Displays all tour dates for the artist
+- Formats tour dates into readable text
+- Shows ticket links only when a ticket URL exists
+- Shows owner-only controls for editing and deleting artists
+- Shows owner-only controls for adding, editing, and deleting tour dates
+
+### Artist Management
+Managers can:
+- Add a new artist
+- Edit an existing artist they own
+- Delete an artist they own
+- Assign multiple genres to an artist
+- Preview an artist image live while entering a photo URL
+
+### Tour Date Management
+Managers can:
+- Add a tour date to an artist they own
+- Edit an existing tour date
+- Delete an individual tour date from the artist profile page
+- View tour dates directly on the artist profile page
+
+### Permissions
+The app includes ownership-based permissions:
+- Only the owner of an artist can edit or delete that artist
+- Only the owner of an artist can add, edit, or delete that artist’s tour dates
+- Non-owners can still view artist profiles and public tour date information
 
 ---
 
@@ -95,6 +143,7 @@ src/
     AddArtist.jsx
     EditArtist.jsx
     AddTourDate.jsx
+    EditTourDate.jsx
   services/
     authService.js
     artistService.js
@@ -102,134 +151,3 @@ public/
   images/
     artists/
 database.json
-```
-
----
-
-## Getting Started
-
-### 1. Install dependencies
-
-```bash
-npm install
-```
-
-### 2. Start JSON Server
-
-Make sure your database is running on port `8088`:
-
-```bash
-json-server -p 8088 -w database.json
-```
-
-### 3. Start the React app
-
-If this project is using Create React App:
-
-```bash
-npm start
-```
-
-The frontend should run on:
-
-```txt
-http://localhost:3000
-```
-
----
-
-## Image Setup
-
-Artist images are stored in:
-
-```txt
-public/images/artists/
-```
-
-Example:
-
-```txt
-public/images/artists/NovaReyes.jpg
-```
-
-Then reference them in `database.json` like this:
-
-```json
-"photoUrl": "/images/artists/NovaReyes.jpg"
-```
-
----
-
-## Example Artist Record
-
-```json
-{
-  "id": "1",
-  "name": "Nova Reyes",
-  "bio": "Indie-R&B singer-songwriter from Nashville.",
-  "photoUrl": "/images/artists/NovaReyes.jpg",
-  "originCity": "Nashville, TN",
-  "activeSince": 2019,
-  "userId": "Q8zjwEq1Ul8"
-}
-```
-
----
-
-## Example Genre Relationship
-
-```json
-{
-  "id": "1",
-  "artistId": "1",
-  "genreId": "1"
-}
-```
-
----
-
-## Routes
-
-Current routes include:
-
-- `/` — Home
-- `/login` — Login
-- `/register` — Register
-- `/roster` — My Roster
-- `/artists` — Browse All
-- `/artists/:artistId` — Artist Profile
-- `/artists/new` — Add Artist
-- `/artists/:artistId/edit` — Edit Artist
-- `/artists/:artistId/tourdates/new` — Add Tour Date
-
----
-
-## Styling Notes
-
-The UI uses Tailwind utility classes for:
-- Layout and spacing
-- Borders and rounded cards
-- Shadows and hover effects
-- Glass-style card backgrounds
-- Responsive grid layouts
-
----
-
-## Roadmap
-
-Planned next steps include:
-
-- Build the **Add Artist** page
-- Build the **Browse All** page fully
-- Build the **Artist Profile** page
-- Add edit/delete functionality for artists
-- Add tour date management
-- Add better validation and duplicate email checks
-- Improve image uploads
-- Improve manager-specific features
-
----
-
-## Author
-
-Built by Kris Cagle.
