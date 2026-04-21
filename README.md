@@ -106,6 +106,17 @@ The app includes ownership-based permissions:
 - Non-owners can still view artist profiles and public tour date information
 
 ---
+Styling Notes
+
+The UI uses Tailwind utility classes for:
+
+Layout and spacing
+Borders and rounded cards
+Shadows and hover effects
+Glass-style card backgrounds
+Responsive grid layouts
+Responsive navigation
+Mobile-friendly forms and buttons
 
 ## Database Structure
 
