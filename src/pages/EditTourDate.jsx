@@ -6,6 +6,10 @@ export const EditTourDate = ({ currentUser }) => {
   const { artistId, tourDateId } = useParams()
   const navigate = useNavigate()
 
+  const normalizedArtistId = Number.isNaN(Number(artistId))
+    ? artistId
+    : Number(artistId)
+
   const [tourDate, setTourDate] = useState({
     id: "",
     venue: "",
@@ -26,11 +30,11 @@ export const EditTourDate = ({ currentUser }) => {
         city: tourDateData.city || "",
         date: tourDateData.date ? String(tourDateData.date).slice(0, 10) : "",
         ticketUrl: tourDateData.ticketUrl || "",
-        artistId: tourDateData.artistId || Number(artistId),
+        artistId: tourDateData.artistId ?? normalizedArtistId,
       })
       setIsLoading(false)
     })
-  }, [tourDateId, artistId])
+  }, [tourDateId, normalizedArtistId])
 
   const handleChange = (event) => {
     const { name, value } = event.target
@@ -54,7 +58,7 @@ export const EditTourDate = ({ currentUser }) => {
     try {
       await updateTourDate({
         ...tourDate,
-        artistId: Number(artistId),
+        artistId: normalizedArtistId,
       })
 
       navigate(`/artists/${artistId}`)

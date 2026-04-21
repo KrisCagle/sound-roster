@@ -15,6 +15,21 @@
       "fullName": "Josh Long",
       "email": "JLong@MusicManager.com",
       "id": "gR9hsrQn_ww"
+    },
+    {
+      "fullName": "Dave",
+      "email": "Dave@email.com",
+      "id": "nor1BVcTZkU"
+    },
+    {
+      "fullName": "New Manager",
+      "email": "boyyo@gmail.com",
+      "id": "uxPSRTvlqCA"
+    },
+    {
+      "fullName": "Rick",
+      "email": "Manager@email.com",
+      "id": "MwgYgmMFgxY"
     }
   ],
   "artists": [
@@ -152,6 +167,60 @@
       "originCity": "New Orleans, Lousiana",
       "activeSince": 2004,
       "userId": "OOcGhzkfh8E"
+    },
+    {
+      "id": "TZrx87tzdrw",
+      "name": "Dave",
+      "bio": "Dave rips on the CDJ's and is a hero to all. Legendary status.",
+      "photoUrl": "/images/artists/Dave.jpg",
+      "originCity": "Atlanta, GA",
+      "activeSince": 2005,
+      "userId": "Q8zjwEq1Ul8"
+    },
+    {
+      "id": "-G0q5e1McTg",
+      "name": "Money Makers",
+      "bio": "The hottest band in Atlanta and surrounding areas by far. Bring your checkbook.",
+      "photoUrl": "/images/artists/MoneyMakers.jpg",
+      "originCity": "Newport News",
+      "activeSince": 2024,
+      "userId": "nor1BVcTZkU"
+    },
+    {
+      "id": "T8kAcCn2En4",
+      "name": "Mr. Bungle",
+      "bio": "The Real artist",
+      "photoUrl": "/images/artists/MrBungle.jpg",
+      "originCity": "Knoxville",
+      "activeSince": 1992,
+      "userId": "nor1BVcTZkU"
+    },
+    {
+      "id": "DthFcijRb5I",
+      "name": "Front End",
+      "bio": "The best band in Arizona.",
+      "photoUrl": "/images/artists/FrontEnd.jpg",
+      "originCity": "Phoenix",
+      "activeSince": 1998,
+      "userId": "MwgYgmMFgxY"
+    },
+    {
+      "name": "Hero Remains",
+      "bio": "Heavy band with memorable chorus's and catchy hooks.",
+      "photoUrl": "/images/artists/HeroRemains.jpg",
+      "originCity": "Seattle",
+      "activeSince": 1996,
+      "userId": "uxPSRTvlqCA",
+      "id": "m3k2l-ugM9A"
+    },
+    {
+      "name": "Big Phil",
+      "bio": "Big Phil has the hits.",
+      "photoUrl": "/images/artists/BigPhil.jpg",
+      "originCity": "Memphis, TN",
+      "activeSince": 1991,
+      "userId": "nor1BVcTZkU",
+      "id": "67nO1YVhrng"
     }
   ],
   "tourDates": [
@@ -274,6 +343,110 @@
       "ticketUrl": "https://the5spotnashville.com/",
       "artistId": "3",
       "id": "7IHas9lUVjw"
+    },
+    {
+      "venue": "Bridgestone Arena",
+      "city": "Nashville, TN",
+      "date": "2026-04-25",
+      "ticketUrl": "https://ryman.com",
+      "artistId": null,
+      "id": "ZN9lvkXlW0E"
+    },
+    {
+      "venue": "The Ryman",
+      "city": "Nashville, TN",
+      "date": "2026-04-30",
+      "ticketUrl": "https://ryman.com",
+      "artistId": null,
+      "id": "D9KbyRRIWoU"
+    },
+    {
+      "venue": "The Ryman Auditorium",
+      "city": "nashville",
+      "date": "2026-04-24",
+      "ticketUrl": "",
+      "artistId": 1,
+      "id": "ga-G885jIys"
+    },
+    {
+      "venue": "RocketTown",
+      "city": "Nashville",
+      "date": "2026-05-25",
+      "ticketUrl": "",
+      "artistId": 3,
+      "id": "GQbi1zKBzwY"
+    },
+    {
+      "id": "FdHM_yZhqf4",
+      "venue": "Sounds and Grounds",
+      "city": "Memphis",
+      "date": "2026-04-27",
+      "ticketUrl": "",
+      "artistId": "-G0q5e1McTg"
+    },
+    {
+      "id": "SgOcxzbIjjE",
+      "venue": "The Ryman",
+      "city": "Nashville",
+      "date": "2026-05-09",
+      "ticketUrl": "https://ryman.com",
+      "artistId": null
+    },
+    {
+      "id": "llHC6HzjO40",
+      "venue": "The Ryman Auditorium",
+      "city": "Nashville",
+      "date": "2026-04-30",
+      "ticketUrl": "https://ryman.com",
+      "artistId": "-G0q5e1McTg"
+    },
+    {
+      "id": "9ynm2KI6NV8",
+      "venue": "The Concourse",
+      "city": "Knoxville",
+      "date": "2026-06-27",
+      "ticketUrl": "https://www.thejazzplayhouse.com/",
+      "artistId": "T8kAcCn2En4"
+    },
+    {
+      "venue": "The Van Buren",
+      "city": "Phoenix",
+      "date": "2026-08-28",
+      "ticketUrl": "https://www.thevanburenphx.com/?utm_source=GMBlisting&utm_medium=organic",
+      "artistId": "DthFcijRb5I",
+      "id": "d1RXEFcZZvQ"
+    },
+    {
+      "venue": "The Concourse",
+      "city": "Johnson City, TN",
+      "date": "2026-06-24",
+      "ticketUrl": "https://www.eventbrite.com/o/capones-18723070440",
+      "artistId": "-G0q5e1McTg",
+      "id": "FBQ3IpiIvgY"
+    },
+    {
+      "id": "KfVarCqB6Ec",
+      "venue": "Fun House",
+      "city": "Seattle",
+      "date": "2026-07-22",
+      "ticketUrl": "https://www.elcorazonseattle.com/",
+      "artistId": "m3k2l-ugM9A"
+    },
+    {
+      "id": "8ETWYhVLvEg",
+      "venue": "LowDive",
+      "city": "Seattle",
+      "date": "2026-07-22",
+      "ticketUrl": "https://tinyshidive.com/",
+      "artistId": "TZrx87tzdrw"
+    },
+    {
+      "venue": "Tiny's Hi Dive",
+      "city": "Nashville",
+      "date": "2026-05-06",
+      "ticketUrl": "",
+      "artistId": "TZrx87tzdrw",
+      "id": "GZAB3L8gCK4"
     }
   ],
   "genres": [
@@ -476,6 +649,76 @@
       "artistId": "1",
       "genreId": "2",
       "id": "8xH5LQRUkiE"
+    },
+    {
+      "artistId": "TZrx87tzdrw",
+      "genreId": "6",
+      "id": "QNi8Q8LFrnY"
+    },
+    {
+      "artistId": "TZrx87tzdrw",
+      "genreId": "3",
+      "id": "L4DzXiXemKM"
+    },
+    {
+      "artistId": "DthFcijRb5I",
+      "genreId": "8",
+      "id": "CUQ8bxH_rcg"
+    },
+    {
+      "artistId": "DthFcijRb5I",
+      "genreId": "5",
+      "id": "FQ_90-DGMMA"
+    },
+    {
+      "artistId": "T8kAcCn2En4",
+      "genreId": "10",
+      "id": "_X3lJRD_x00"
+    },
+    {
+      "artistId": "T8kAcCn2En4",
+      "genreId": "11",
+      "id": "Z9aOW1Ydikc"
+    },
+    {
+      "artistId": "T8kAcCn2En4",
+      "genreId": "2",
+      "id": "molw9pQQegI"
+    },
+    {
+      "artistId": "-G0q5e1McTg",
+      "genreId": "11",
+      "id": "GW2HRUZoBA0"
+    },
+    {
+      "artistId": "-G0q5e1McTg",
+      "genreId": "12",
+      "id": "mhJ95k2BCEI"
+    },
+    {
+      "artistId": "-G0q5e1McTg",
+      "genreId": "4",
+      "id": "f3LgGpxViB4"
+    },
+    {
+      "artistId": "m3k2l-ugM9A",
+      "genreId": "10",
+      "id": "LZYjIvTllko"
+    },
+    {
+      "artistId": "67nO1YVhrng",
+      "genreId": "11",
+      "id": "QwYLhlnjHLs"
+    },
+    {
+      "artistId": "67nO1YVhrng",
+      "genreId": "2",
+      "id": "YILYmyBdR4Y"
+    },
+    {
+      "artistId": "67nO1YVhrng",
+      "genreId": "7",
+      "id": "TL5Hh0k6PPs"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
