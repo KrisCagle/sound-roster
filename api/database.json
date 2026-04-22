@@ -49,7 +49,9 @@
       "photoUrl": "/images/artists/DexHolloway.jpg",
       "originCity": "Atlanta, GA",
       "activeSince": 2021,
-      "userId": "Q8zjwEq1Ul8"
+      "userId": "Q8zjwEq1Ul8",
+      "facebookUrl": "https://facebook.com",
+      "instagramUrl": "https://www.instagram.com"
     },
     {
       "id": "3",
@@ -67,7 +69,9 @@
       "photoUrl": "/images/artists/MidnightArcade.jpg",
       "originCity": "Knoxville, TN",
       "activeSince": 2020,
-      "userId": "Q8zjwEq1Ul8"
+      "userId": "Q8zjwEq1Ul8",
+      "facebookUrl": "https://facebook.com",
+      "instagramUrl": "https://www.instagram.com"
     },
     {
       "id": "5",
@@ -94,7 +98,9 @@
       "photoUrl": "\\images\\artists\\RamblingStation.jpg",
       "originCity": "Nashville, TN",
       "activeSince": 2020,
-      "userId": "Q8zjwEq1Ul8"
+      "userId": "Q8zjwEq1Ul8",
+      "facebookUrl": "https://www.facebook.com/search/top?q=rambling%20station",
+      "instagramUrl": "https://www.instagram.com/ramblingstation4u/"
     },
     {
       "id": "7",
@@ -151,13 +157,15 @@
       "id": "iLp6AlRoHXI"
     },
     {
+      "id": "N0NFvdSRRDU",
       "name": "Chris Whit and The Blind Men",
       "bio": "The band that invented Country and Western. Both of the best genres of music.",
       "photoUrl": "/images/artists/ChrisWhitandTheBlindMen.jpg",
       "originCity": "Dallas, Texas",
       "activeSince": 2000,
       "userId": "OOcGhzkfh8E",
-      "id": "N0NFvdSRRDU"
+      "facebookUrl": "https://facebook.com",
+      "instagramUrl": "https://www.instagram.com"
     },
     {
       "id": "vtP5KVIqk1g",
@@ -225,22 +233,6 @@
   ],
   "tourDates": [
     {
-      "id": "1",
-      "venue": "The Ryman Auditorium",
-      "city": "Nashville, TN",
-      "date": "2025-08-14",
-      "ticketUrl": "https://ryman.com",
-      "artistId": 1
-    },
-    {
-      "id": "2",
-      "venue": "9:30 Club",
-      "city": "Washington, DC",
-      "date": "2025-09-03",
-      "ticketUrl": "https://930.com",
-      "artistId": "1"
-    },
-    {
       "id": "3",
       "venue": "The Masquerade",
       "city": "Atlanta, GA",
@@ -290,11 +282,11 @@
     },
     {
       "id": "EVZg8WXqq-o",
-      "venue": "The Concourse",
+      "venue": "Capone's",
       "city": "Johnson City, TN",
       "date": "2026-06-18",
       "ticketUrl": "https://www.eventbrite.com/o/capones-18723070440",
-      "artistId": "4"
+      "artistId": 4
     },
     {
       "id": "2N7X6CIYUEo",
@@ -345,30 +337,6 @@
       "id": "7IHas9lUVjw"
     },
     {
-      "venue": "Bridgestone Arena",
-      "city": "Nashville, TN",
-      "date": "2026-04-25",
-      "ticketUrl": "https://ryman.com",
-      "artistId": null,
-      "id": "ZN9lvkXlW0E"
-    },
-    {
-      "venue": "The Ryman",
-      "city": "Nashville, TN",
-      "date": "2026-04-30",
-      "ticketUrl": "https://ryman.com",
-      "artistId": null,
-      "id": "D9KbyRRIWoU"
-    },
-    {
-      "venue": "The Ryman Auditorium",
-      "city": "nashville",
-      "date": "2026-04-24",
-      "ticketUrl": "",
-      "artistId": 1,
-      "id": "ga-G885jIys"
-    },
-    {
       "venue": "RocketTown",
       "city": "Nashville",
       "date": "2026-05-25",
@@ -383,14 +351,6 @@
       "date": "2026-04-27",
       "ticketUrl": "",
       "artistId": "-G0q5e1McTg"
-    },
-    {
-      "id": "SgOcxzbIjjE",
-      "venue": "The Ryman",
-      "city": "Nashville",
-      "date": "2026-05-09",
-      "ticketUrl": "https://ryman.com",
-      "artistId": null
     },
     {
       "id": "llHC6HzjO40",
@@ -447,6 +407,38 @@
       "ticketUrl": "",
       "artistId": "TZrx87tzdrw",
       "id": "GZAB3L8gCK4"
+    },
+    {
+      "venue": "The Ryman Auditorium",
+      "city": "Nashville",
+      "date": "2026-05-07",
+      "ticketUrl": "https://ryman.com",
+      "artistId": 1,
+      "id": "h5vwrsO05iw"
+    },
+    {
+      "venue": "9:30 Club",
+      "city": "Washington, DC",
+      "date": "2026-05-16",
+      "ticketUrl": "https://www.930.com/",
+      "artistId": 1,
+      "id": "CZN9phLmBUA"
+    },
+    {
+      "venue": "House Of Blues",
+      "city": "Houston",
+      "date": "2026-11-12",
+      "ticketUrl": "https://houston.houseofblues.com/?utm_source=GMBlisting&utm_medium=organic",
+      "artistId": "N0NFvdSRRDU",
+      "id": "DmGUlA9bsao"
+    },
+    {
+      "venue": "Bonnaroo",
+      "city": "Nashville, TN",
+      "date": "2026-06-12",
+      "ticketUrl": "https://www.bonnaroo.com/",
+      "artistId": 4,
+      "id": "rV1C7_JXmXY"
     }
   ],
   "genres": [
@@ -511,16 +503,6 @@
       "genreId": "4"
     },
     {
-      "id": "6",
-      "artistId": "4",
-      "genreId": "9"
-    },
-    {
-      "id": "7",
-      "artistId": "4",
-      "genreId": "6"
-    },
-    {
       "id": "8",
       "artistId": "5",
       "genreId": "7"
@@ -529,11 +511,6 @@
       "id": "9",
       "artistId": "5",
       "genreId": "11"
-    },
-    {
-      "artistId": "2",
-      "genreId": "3",
-      "id": "88qZeUAm9gw"
     },
     {
       "artistId": "6",
@@ -549,21 +526,6 @@
       "artistId": "6",
       "genreId": "8",
       "id": "vX-jJIBmzGE"
-    },
-    {
-      "artistId": "uivEa_XazUM",
-      "genreId": "7",
-      "id": "1OOTDZNOMAk"
-    },
-    {
-      "artistId": "uivEa_XazUM",
-      "genreId": "6",
-      "id": "eObf4lOqsx4"
-    },
-    {
-      "artistId": "uivEa_XazUM",
-      "genreId": "5",
-      "id": "pYhIa6yrpVQ"
     },
     {
       "artistId": "8",
@@ -609,21 +571,6 @@
       "artistId": "iLp6AlRoHXI",
       "genreId": "6",
       "id": "L95E4icu7dw"
-    },
-    {
-      "artistId": "N0NFvdSRRDU",
-      "genreId": "7",
-      "id": "2dLVEquEGps"
-    },
-    {
-      "artistId": "N0NFvdSRRDU",
-      "genreId": "11",
-      "id": "-L3_yxCm-lE"
-    },
-    {
-      "artistId": "N0NFvdSRRDU",
-      "genreId": "5",
-      "id": "aTd64_d2Cpw"
     },
     {
       "artistId": "vtP5KVIqk1g",
@@ -719,6 +666,51 @@
       "artistId": "67nO1YVhrng",
       "genreId": "7",
       "id": "TL5Hh0k6PPs"
+    },
+    {
+      "artistId": "uivEa_XazUM",
+      "genreId": "7",
+      "id": "oQPIVcUyTjw"
+    },
+    {
+      "artistId": "uivEa_XazUM",
+      "genreId": "6",
+      "id": "cFfgku6oBzY"
+    },
+    {
+      "artistId": "uivEa_XazUM",
+      "genreId": "5",
+      "id": "_sDv7ualrmU"
+    },
+    {
+      "artistId": "2",
+      "genreId": "3",
+      "id": "ChBKfS1SpYw"
+    },
+    {
+      "artistId": "N0NFvdSRRDU",
+      "genreId": "7",
+      "id": "lbdH3YPjwgo"
+    },
+    {
+      "artistId": "N0NFvdSRRDU",
+      "genreId": "11",
+      "id": "48DV0r-T6T4"
+    },
+    {
+      "artistId": "N0NFvdSRRDU",
+      "genreId": "5",
+      "id": "WjdkBUYye2g"
+    },
+    {
+      "artistId": "4",
+      "genreId": "9",
+      "id": "bWJZrFj7Phw"
+    },
+    {
+      "artistId": "4",
+      "genreId": "6",
+      "id": "OHsvs25Ezio"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

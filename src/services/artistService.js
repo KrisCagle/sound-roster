@@ -205,3 +205,33 @@ export const deleteTourDatesByArtistId = async (artistId) => {
     )
   )
 }
+export const getUpcomingTourDatesWithArtists = async () => {
+  const [tourDates, artists] = await Promise.all([
+    fetch(`${baseUrl}/tourDates`).then((res) => res.json()),
+    fetch(`${baseUrl}/artists`).then((res) => res.json()),
+  ])
+
+  const today = new Date()
+  today.setHours(0, 0, 0, 0)
+
+  return tourDates
+    .filter((tourDate) => {
+      const showDate = new Date(`${tourDate.date}T12:00:00`)
+      return showDate >= today
+    })
+    .map((tourDate) => {
+      const artist = artists.find(
+        (artist) => String(artist.id) === String(tourDate.artistId)
+      )
+
+      return {
+        ...tourDate,
+        artistName: artist?.name || "Unknown Artist",
+        artistPhotoUrl: artist?.photoUrl || "https://placehold.co/300x300",
+      }
+    })
+    .sort(
+      (a, b) =>
+        new Date(`${a.date}T12:00:00`) - new Date(`${b.date}T12:00:00`)
+    )
+}

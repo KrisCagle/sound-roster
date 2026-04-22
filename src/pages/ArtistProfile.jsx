@@ -10,6 +10,28 @@ import {
   deleteArtistById,
   deleteTourDateById,
 } from "../services/artistService"
+const FacebookIcon = () => (
+  <svg
+    aria-hidden="true"
+    viewBox="0 0 24 24"
+    className="h-5 w-5 fill-current"
+  >
+    <path d="M13.5 22v-8h2.7l.4-3h-3.1V9.1c0-.9.3-1.5 1.6-1.5H17V4.9c-.4-.1-1.3-.1-2.4-.1-2.4 0-4 1.4-4 4.1V11H8v3h2.2v8h3.3Z" />
+  </svg>
+)
+
+const InstagramIcon = () => (
+  <svg
+    aria-hidden="true"
+    viewBox="0 0 24 24"
+    className="h-5 w-5 fill-none stroke-current"
+    strokeWidth="2"
+  >
+    <rect x="3" y="3" width="18" height="18" rx="5" />
+    <circle cx="12" cy="12" r="4" />
+    <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+  </svg>
+)
 
 export const ArtistProfile = ({ currentUser }) => {
   const { artistId } = useParams()
@@ -142,7 +164,33 @@ export const ArtistProfile = ({ currentUser }) => {
                 }}
               />
             </div>
+            {artist.facebookUrl?.trim() || artist.instagramUrl?.trim() ? (
+  <div className="mt-4 flex items-center justify-center gap-4">
+    {artist.facebookUrl?.trim() ? (
+      <a
+        href={artist.facebookUrl}
+        target="_blank"
+        rel="noreferrer"
+        aria-label="Facebook"
+        className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-blue-400/70 bg-white/10 text-blue-200 shadow-[0_10px_24px_rgba(0,0,0,0.2)] transition hover:-translate-y-1 hover:text-white"
+      >
+        <FacebookIcon />
+      </a>
+    ) : null}
 
+    {artist.instagramUrl?.trim() ? (
+      <a
+        href={artist.instagramUrl}
+        target="_blank"
+        rel="noreferrer"
+        aria-label="Instagram"
+        className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-blue-400/70 bg-white/10 text-blue-200 shadow-[0_10px_24px_rgba(0,0,0,0.2)] transition hover:-translate-y-1 hover:text-white"
+      >
+        <InstagramIcon />
+      </a>
+    ) : null}
+  </div>
+) : null}
             {isOwner ? (
               <div className="mt-6 flex flex-col gap-4">
                 <Link

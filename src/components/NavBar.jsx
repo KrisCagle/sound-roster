@@ -36,13 +36,17 @@ export const NavBar = ({ currentUser, setCurrentUser }) => {
 </Link>
           </div>
 
-          <div className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-10 md:flex">
+         <div className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-10 md:flex">
   <NavLink to="/roster" className={navLinkStyle}>
     My Roster
   </NavLink>
 
   <NavLink to="/artists" className={navLinkStyle}>
     Browse All
+  </NavLink>
+
+  <NavLink to="/upcoming-shows" className={navLinkStyle}>
+    Upcoming Shows
   </NavLink>
 </div>
 
@@ -122,7 +126,15 @@ export const NavBar = ({ currentUser, setCurrentUser }) => {
             >
               Browse All
             </NavLink>
-
+              <NavLink
+  to="/upcoming-shows"
+  className={({ isActive }) =>
+    `${navLinkStyle({ isActive })} block rounded-lg px-3 py-2 text-base`
+  }
+  onClick={() => setShowMobileMenu(false)}
+>
+  Upcoming Shows
+</NavLink>
             <div className="border-t border-white/20 pt-3">
               <div className="mb-3 truncate px-3 text-sm text-white/90">
                 {username}
