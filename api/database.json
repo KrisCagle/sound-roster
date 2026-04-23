@@ -439,6 +439,30 @@
       "ticketUrl": "https://www.bonnaroo.com/",
       "artistId": 4,
       "id": "rV1C7_JXmXY"
+    },
+    {
+      "venue": "The SuperBowl",
+      "city": "TBA",
+      "date": "2026-11-25",
+      "ticketUrl": "https://www.nfl.com/",
+      "artistId": "uivEa_XazUM",
+      "id": "IaK5iKppegE"
+    },
+    {
+      "venue": "The Square Room",
+      "city": "Knoxville",
+      "date": "2026-09-02",
+      "ticketUrl": "https://www.thesquareroomknoxville.com/",
+      "artistId": 1,
+      "id": "bMdCl9USs7U"
+    },
+    {
+      "venue": "Minglewood Hall",
+      "city": "Memphis",
+      "date": "2026-07-23",
+      "ticketUrl": "https://minglewoodhallmemphis.com/",
+      "artistId": 1,
+      "id": "n02Vmu_hI7o"
     }
   ],
   "genres": [
