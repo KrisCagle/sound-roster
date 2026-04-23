@@ -12,6 +12,7 @@ import { EditArtist } from "./pages/EditArtist"
 import { AddTourDate } from "./pages/AddTourDate"
 import { BrowseAll } from "./pages/BrowseAll"
 import { EditTourDate } from "./pages/EditTourDate"
+import { UpcomingShows } from "./pages/UpcomingShows"
 
 const AppRoutes = ({ currentUser, setCurrentUser }) => {
   const location = useLocation()
@@ -62,7 +63,9 @@ const AppRoutes = ({ currentUser, setCurrentUser }) => {
       <Route
           path="/artists/:artistId/tourdates/:tourDateId/edit"
           element={<EditTourDate currentUser={currentUser} />}
-        />  
+        />
+      <Route path="/upcoming-shows" element={<UpcomingShows currentUser={currentUser} />} 
+      />
       </Routes>
     </>
   )

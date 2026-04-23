@@ -20,6 +20,8 @@ export const EditArtist = ({ currentUser }) => {
     originCity: "",
     activeSince: "",
     userId: "",
+    facebookUrl: "",
+    instagramUrl: "",
   })
 
   const [genres, setGenres] = useState([])
@@ -43,6 +45,8 @@ export const EditArtist = ({ currentUser }) => {
         originCity: artistData.originCity || "",
         activeSince: artistData.activeSince || "",
         userId: artistData.userId || currentUser?.id || "",
+        facebookUrl: artistData.facebookUrl || "",
+        instagramUrl: artistData.instagramUrl || "",
       })
 
       setGenres(allGenres)
@@ -169,6 +173,41 @@ export const EditArtist = ({ currentUser }) => {
       className="w-full rounded-2xl border border-blue-400/70 bg-white/10 px-4 py-3 text-white placeholder:text-gray-400 shadow-[0_10px_24px_rgba(0,0,0,0.2)] outline-none transition focus:border-blue-300 focus:ring-2 focus:ring-blue-300/40"
     />
   </div>
+  <div>
+  <label
+    htmlFor="facebookUrl"
+    className="mb-2 block text-sm font-semibold uppercase tracking-wide text-blue-200"
+  >
+    Facebook URL
+  </label>
+  <input
+    id="facebookUrl"
+    type="url"
+    name="facebookUrl"
+    value={artist.facebookUrl}
+    onChange={handleChange}
+    placeholder="https://facebook.com/artistname"
+    className="w-full rounded-2xl border border-blue-400/70 bg-white/10 px-4 py-3 text-white placeholder:text-gray-400 shadow-[0_10px_24px_rgba(0,0,0,0.2)] outline-none transition focus:border-blue-300 focus:ring-2 focus:ring-blue-300/40"
+  />
+</div>
+
+<div>
+  <label
+    htmlFor="instagramUrl"
+    className="mb-2 block text-sm font-semibold uppercase tracking-wide text-blue-200"
+  >
+    Instagram URL
+  </label>
+  <input
+    id="instagramUrl"
+    type="url"
+    name="instagramUrl"
+    value={artist.instagramUrl}
+    onChange={handleChange}
+    placeholder="https://instagram.com/artistname"
+    className="w-full rounded-2xl border border-blue-400/70 bg-white/10 px-4 py-3 text-white placeholder:text-gray-400 shadow-[0_10px_24px_rgba(0,0,0,0.2)] outline-none transition focus:border-blue-300 focus:ring-2 focus:ring-blue-300/40"
+  />
+</div>
 
   <div>
     <label
