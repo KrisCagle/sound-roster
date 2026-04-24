@@ -1,0 +1,741 @@
+{
+  "users": [
+    {
+      "fullName": "Kris Cagle",
+      "email": "kriscagle@gmail.com",
+      "password": "Dobis123$",
+      "id": "Q8zjwEq1Ul8"
+    },
+    {
+      "fullName": "Justice Calhoun",
+      "email": "justiceC@gmail.com",
+      "id": "OOcGhzkfh8E"
+    },
+    {
+      "fullName": "Josh Long",
+      "email": "JLong@MusicManager.com",
+      "id": "gR9hsrQn_ww"
+    },
+    {
+      "fullName": "Dave",
+      "email": "Dave@email.com",
+      "id": "nor1BVcTZkU"
+    },
+    {
+      "fullName": "New Manager",
+      "email": "boyyo@gmail.com",
+      "id": "uxPSRTvlqCA"
+    },
+    {
+      "fullName": "Rick",
+      "email": "Manager@email.com",
+      "id": "MwgYgmMFgxY"
+    }
+  ],
+  "artists": [
+    {
+      "id": "1",
+      "name": "Nova Reyes",
+      "bio": "Indie R&B singer songwriter from Nashville. Known for blending soulful vocals with smooth electric guitar.",
+      "photoUrl": "/images/artists/NovaReyes.jpg",
+      "originCity": "Nashville, TN",
+      "activeSince": 2019,
+      "userId": "Q8zjwEq1Ul8"
+    },
+    {
+      "id": "2",
+      "name": "Dex Holloway",
+      "bio": "Atlanta based Hip-Hop producer and lyricist with a knack for storytelling.",
+      "photoUrl": "/images/artists/DexHolloway.jpg",
+      "originCity": "Atlanta, GA",
+      "activeSince": 2021,
+      "userId": "Q8zjwEq1Ul8",
+      "facebookUrl": "https://facebook.com",
+      "instagramUrl": "https://www.instagram.com"
+    },
+    {
+      "id": "3",
+      "name": "Lara Moss",
+      "bio": "Indie Pop artist from Austin blending dreamy synths with catchy songwriting.",
+      "photoUrl": "/images/artists/LaraMoss.jpg",
+      "originCity": "Austin, TX",
+      "activeSince": 2018,
+      "userId": "Q8zjwEq1Ul8"
+    },
+    {
+      "id": "4",
+      "name": "Midnight Arcade",
+      "bio": "Retro inspired synthwave artist delivering neon drenched hooks and cinematic live sets.",
+      "photoUrl": "/images/artists/MidnightArcade.jpg",
+      "originCity": "Knoxville, TN",
+      "activeSince": 2020,
+      "userId": "Q8zjwEq1Ul8",
+      "facebookUrl": "https://facebook.com",
+      "instagramUrl": "https://www.instagram.com"
+    },
+    {
+      "id": "5",
+      "name": "The Hollow Pines",
+      "bio": "Alt country band mixing southern grit with modern Americana songwriting.",
+      "photoUrl": "/images/artists/TheHollowPines.jpg",
+      "originCity": "Franklin, TN",
+      "activeSince": 2017,
+      "userId": "Q8zjwEq1Ul8"
+    },
+    {
+      "id": "6",
+      "name": "Velvet Static",
+      "bio": "Modern rock project built around dark textures, polished vocals, and festival ready choruses.",
+      "photoUrl": "/images/artists/VelvetStatic.jpg",
+      "originCity": "Murfreesboro, TN",
+      "activeSince": 2022,
+      "userId": "Q8zjwEq1Ul8"
+    },
+    {
+      "id": "uivEa_XazUM",
+      "name": "Rambling Station",
+      "bio": "A synth country band that plays all the hits and has some pretty all right originals.",
+      "photoUrl": "\\images\\artists\\RamblingStation.jpg",
+      "originCity": "Nashville, TN",
+      "activeSince": 2020,
+      "userId": "Q8zjwEq1Ul8",
+      "facebookUrl": "https://www.facebook.com/search/top?q=rambling%20station",
+      "instagramUrl": "https://www.instagram.com/ramblingstation4u/"
+    },
+    {
+      "id": "7",
+      "name": "Harbor Saints",
+      "bio": "Americana trio blending warm harmonies, road worn storytelling, and roots driven arrangements.",
+      "photoUrl": "/images/artists/HarborSaints.jpg",
+      "originCity": "Memphis, TN",
+      "activeSince": 2021,
+      "userId": "OOcGhzkfh8E"
+    },
+    {
+      "id": "8",
+      "name": "Neon Revival",
+      "bio": "High energy synth pop act mixing retro textures with modern hooks and big live choruses.",
+      "photoUrl": "\\images\\artists\\NeonRevival.jpg",
+      "originCity": "Louisville, KY",
+      "activeSince": 2022,
+      "userId": "OOcGhzkfh8E"
+    },
+    {
+      "id": "9",
+      "name": "Cedar Vale",
+      "bio": "Indie rock band with jangly guitars, reflective lyrics, and a wide open heartland sound.",
+      "photoUrl": "/images/artists/CederVale.jpg",
+      "originCity": "Birmingham, AL",
+      "activeSince": 2020,
+      "userId": "OOcGhzkfh8E"
+    },
+    {
+      "id": "Zdw7DV8sgpI",
+      "name": "The Ghost Outside",
+      "bio": "A deathcore band with guttural growls and dark breakdowns.",
+      "photoUrl": "/images/artists/TheGhostOutside.jpg",
+      "originCity": "New York, New York",
+      "activeSince": 2010,
+      "userId": "gR9hsrQn_ww"
+    },
+    {
+      "name": "Travesty",
+      "bio": "The heaviest band in California. Crushing lows and an anger that just keeps growing.  ",
+      "photoUrl": "/images/artists/Travesty.jpg",
+      "originCity": "Los Angeles, California",
+      "activeSince": 1999,
+      "userId": "gR9hsrQn_ww",
+      "id": "snHsBtTyGrg"
+    },
+    {
+      "name": "DJ Drips",
+      "bio": "The most sultry of DJ's in the south. Smooth vibes and electric electronic hits.",
+      "photoUrl": "/images/artists/DJDrips.jpg",
+      "originCity": "Daytona, Florida",
+      "activeSince": 2017,
+      "userId": "gR9hsrQn_ww",
+      "id": "iLp6AlRoHXI"
+    },
+    {
+      "id": "N0NFvdSRRDU",
+      "name": "Chris Whit and The Blind Men",
+      "bio": "The band that invented Country and Western. Both of the best genres of music.",
+      "photoUrl": "/images/artists/ChrisWhitandTheBlindMen.jpg",
+      "originCity": "Dallas, Texas",
+      "activeSince": 2000,
+      "userId": "OOcGhzkfh8E",
+      "facebookUrl": "https://facebook.com",
+      "instagramUrl": "https://www.instagram.com"
+    },
+    {
+      "id": "vtP5KVIqk1g",
+      "name": "Cup of Jazz",
+      "bio": "Hot, flashy and the best Jazz in the south. Nothing can stop this group of fine musicians and their love of the hits.",
+      "photoUrl": "/images/artists/CupofJazz.jpg",
+      "originCity": "New Orleans, Lousiana",
+      "activeSince": 2004,
+      "userId": "OOcGhzkfh8E"
+    },
+    {
+      "id": "TZrx87tzdrw",
+      "name": "Dave",
+      "bio": "Dave rips on the CDJ's and is a hero to all. Legendary status.",
+      "photoUrl": "/images/artists/Dave.jpg",
+      "originCity": "Atlanta, GA",
+      "activeSince": 2005,
+      "userId": "Q8zjwEq1Ul8"
+    },
+    {
+      "id": "-G0q5e1McTg",
+      "name": "Money Makers",
+      "bio": "The hottest band in Atlanta and surrounding areas by far. Bring your checkbook.",
+      "photoUrl": "/images/artists/MoneyMakers.jpg",
+      "originCity": "Newport News",
+      "activeSince": 2024,
+      "userId": "nor1BVcTZkU"
+    },
+    {
+      "id": "T8kAcCn2En4",
+      "name": "Mr. Bungle",
+      "bio": "The Real artist",
+      "photoUrl": "/images/artists/MrBungle.jpg",
+      "originCity": "Knoxville",
+      "activeSince": 1992,
+      "userId": "nor1BVcTZkU"
+    },
+    {
+      "id": "DthFcijRb5I",
+      "name": "Front End",
+      "bio": "The best band in Arizona.",
+      "photoUrl": "/images/artists/FrontEnd.jpg",
+      "originCity": "Phoenix",
+      "activeSince": 1998,
+      "userId": "MwgYgmMFgxY"
+    },
+    {
+      "name": "Hero Remains",
+      "bio": "Heavy band with memorable chorus's and catchy hooks.",
+      "photoUrl": "/images/artists/HeroRemains.jpg",
+      "originCity": "Seattle",
+      "activeSince": 1996,
+      "userId": "uxPSRTvlqCA",
+      "id": "m3k2l-ugM9A"
+    },
+    {
+      "name": "Big Phil",
+      "bio": "Big Phil has the hits.",
+      "photoUrl": "/images/artists/BigPhil.jpg",
+      "originCity": "Memphis, TN",
+      "activeSince": 1991,
+      "userId": "nor1BVcTZkU",
+      "id": "67nO1YVhrng"
+    }
+  ],
+  "tourDates": [
+    {
+      "id": "3",
+      "venue": "The Masquerade",
+      "city": "Atlanta, GA",
+      "date": "2025-08-22",
+      "ticketUrl": "https://masqueradeatlanta.com",
+      "artistId": "2"
+    },
+    {
+      "id": "4",
+      "venue": "The Hi Tone",
+      "city": "Memphis, TN",
+      "date": "2026-07-12",
+      "ticketUrl": "https://example.com/harbor-saints-memphis",
+      "artistId": "7"
+    },
+    {
+      "id": "5",
+      "venue": "The Basement",
+      "city": "Nashville, TN",
+      "date": "2026-07-18",
+      "ticketUrl": "https://example.com/harbor-saints-nashville",
+      "artistId": "7"
+    },
+    {
+      "id": "6",
+      "venue": "Zanzabar",
+      "city": "Louisville, KY",
+      "date": "2026-08-02",
+      "ticketUrl": "https://example.com/neon-revival-louisville",
+      "artistId": "8"
+    },
+    {
+      "id": "7",
+      "venue": "The End",
+      "city": "Nashville, TN",
+      "date": "2026-08-09",
+      "ticketUrl": "https://example.com/neon-revival-nashville",
+      "artistId": "8"
+    },
+    {
+      "id": "8",
+      "venue": "Saturn",
+      "city": "Birmingham, AL",
+      "date": "2026-08-21",
+      "ticketUrl": "https://example.com/cedar-vale-birmingham",
+      "artistId": "9"
+    },
+    {
+      "id": "EVZg8WXqq-o",
+      "venue": "Capone's",
+      "city": "Johnson City, TN",
+      "date": "2026-06-18",
+      "ticketUrl": "https://www.eventbrite.com/o/capones-18723070440",
+      "artistId": 4
+    },
+    {
+      "id": "2N7X6CIYUEo",
+      "venue": "Tiny's Hi Dive",
+      "city": "Los Angeles, California",
+      "date": "2026-11-18",
+      "ticketUrl": "https://tinyshidive.com/",
+      "artistId": "snHsBtTyGrg"
+    },
+    {
+      "venue": "The 509 Lounge",
+      "city": "Daytona, Florida",
+      "date": "2026-04-30",
+      "ticketUrl": "https://www.509lounge.com/",
+      "artistId": "iLp6AlRoHXI",
+      "id": "YAmd3dHdffE"
+    },
+    {
+      "venue": "Texas State Fair",
+      "city": "Dallas, Texas",
+      "date": "2026-05-21",
+      "ticketUrl": "https://bigtex.com/",
+      "artistId": "N0NFvdSRRDU",
+      "id": "oyxl-kVbQDA"
+    },
+    {
+      "venue": "The Jazz Playhouse",
+      "city": "New Orleans",
+      "date": "2026-05-24",
+      "ticketUrl": "https://www.thejazzplayhouse.com/",
+      "artistId": "vtP5KVIqk1g",
+      "id": "5OJb5bgcEtk"
+    },
+    {
+      "venue": "Bridgestone Arena",
+      "city": "Nashville, TN",
+      "date": "2026-06-12",
+      "ticketUrl": "https://www.bridgestonearena.com/",
+      "artistId": "uivEa_XazUM",
+      "id": "GKs2tocH4I4"
+    },
+    {
+      "venue": "The 5 Spot",
+      "city": "Nashville, TN",
+      "date": "2026-07-06",
+      "ticketUrl": "https://the5spotnashville.com/",
+      "artistId": "3",
+      "id": "7IHas9lUVjw"
+    },
+    {
+      "venue": "RocketTown",
+      "city": "Nashville",
+      "date": "2026-05-25",
+      "ticketUrl": "",
+      "artistId": 3,
+      "id": "GQbi1zKBzwY"
+    },
+    {
+      "id": "FdHM_yZhqf4",
+      "venue": "Sounds and Grounds",
+      "city": "Memphis",
+      "date": "2026-04-27",
+      "ticketUrl": "",
+      "artistId": "-G0q5e1McTg"
+    },
+    {
+      "id": "llHC6HzjO40",
+      "venue": "The Ryman Auditorium",
+      "city": "Nashville",
+      "date": "2026-04-30",
+      "ticketUrl": "https://ryman.com",
+      "artistId": "-G0q5e1McTg"
+    },
+    {
+      "id": "9ynm2KI6NV8",
+      "venue": "The Concourse",
+      "city": "Knoxville",
+      "date": "2026-06-27",
+      "ticketUrl": "https://www.thejazzplayhouse.com/",
+      "artistId": "T8kAcCn2En4"
+    },
+    {
+      "venue": "The Van Buren",
+      "city": "Phoenix",
+      "date": "2026-08-28",
+      "ticketUrl": "https://www.thevanburenphx.com/?utm_source=GMBlisting&utm_medium=organic",
+      "artistId": "DthFcijRb5I",
+      "id": "d1RXEFcZZvQ"
+    },
+    {
+      "venue": "The Concourse",
+      "city": "Johnson City, TN",
+      "date": "2026-06-24",
+      "ticketUrl": "https://www.eventbrite.com/o/capones-18723070440",
+      "artistId": "-G0q5e1McTg",
+      "id": "FBQ3IpiIvgY"
+    },
+    {
+      "id": "KfVarCqB6Ec",
+      "venue": "Fun House",
+      "city": "Seattle",
+      "date": "2026-07-22",
+      "ticketUrl": "https://www.elcorazonseattle.com/",
+      "artistId": "m3k2l-ugM9A"
+    },
+    {
+      "id": "8ETWYhVLvEg",
+      "venue": "LowDive",
+      "city": "Seattle",
+      "date": "2026-07-22",
+      "ticketUrl": "https://tinyshidive.com/",
+      "artistId": "TZrx87tzdrw"
+    },
+    {
+      "venue": "Tiny's Hi Dive",
+      "city": "Nashville",
+      "date": "2026-05-06",
+      "ticketUrl": "",
+      "artistId": "TZrx87tzdrw",
+      "id": "GZAB3L8gCK4"
+    },
+    {
+      "venue": "The Ryman Auditorium",
+      "city": "Nashville",
+      "date": "2026-05-07",
+      "ticketUrl": "https://ryman.com",
+      "artistId": 1,
+      "id": "h5vwrsO05iw"
+    },
+    {
+      "venue": "9:30 Club",
+      "city": "Washington, DC",
+      "date": "2026-05-16",
+      "ticketUrl": "https://www.930.com/",
+      "artistId": 1,
+      "id": "CZN9phLmBUA"
+    },
+    {
+      "venue": "House Of Blues",
+      "city": "Houston",
+      "date": "2026-11-12",
+      "ticketUrl": "https://houston.houseofblues.com/?utm_source=GMBlisting&utm_medium=organic",
+      "artistId": "N0NFvdSRRDU",
+      "id": "DmGUlA9bsao"
+    },
+    {
+      "venue": "Bonnaroo",
+      "city": "Nashville, TN",
+      "date": "2026-06-12",
+      "ticketUrl": "https://www.bonnaroo.com/",
+      "artistId": 4,
+      "id": "rV1C7_JXmXY"
+    },
+    {
+      "venue": "The SuperBowl",
+      "city": "TBA",
+      "date": "2026-11-25",
+      "ticketUrl": "https://www.nfl.com/",
+      "artistId": "uivEa_XazUM",
+      "id": "IaK5iKppegE"
+    },
+    {
+      "venue": "The Square Room",
+      "city": "Knoxville",
+      "date": "2026-09-02",
+      "ticketUrl": "https://www.thesquareroomknoxville.com/",
+      "artistId": 1,
+      "id": "bMdCl9USs7U"
+    },
+    {
+      "venue": "Minglewood Hall",
+      "city": "Memphis",
+      "date": "2026-07-23",
+      "ticketUrl": "https://minglewoodhallmemphis.com/",
+      "artistId": 1,
+      "id": "n02Vmu_hI7o"
+    }
+  ],
+  "genres": [
+    {
+      "id": "1",
+      "name": "Indie"
+    },
+    {
+      "id": "2",
+      "name": "R&B"
+    },
+    {
+      "id": "3",
+      "name": "Hip-Hop"
+    },
+    {
+      "id": "4",
+      "name": "Pop"
+    },
+    {
+      "id": "5",
+      "name": "Rock"
+    },
+    {
+      "id": "6",
+      "name": "Electronic"
+    },
+    {
+      "id": "7",
+      "name": "Country"
+    },
+    {
+      "id": "8",
+      "name": "Alt"
+    },
+    {
+      "id": "9",
+      "name": "Synthwave"
+    },
+    {
+      "id": "10",
+      "name": "Death Core"
+    },
+    {
+      "id": "11",
+      "name": "Americana"
+    },
+    {
+      "id": "12",
+      "name": "Jazz"
+    }
+  ],
+  "artistGenres": [
+    {
+      "id": "4",
+      "artistId": "3",
+      "genreId": "1"
+    },
+    {
+      "id": "5",
+      "artistId": "3",
+      "genreId": "4"
+    },
+    {
+      "id": "8",
+      "artistId": "5",
+      "genreId": "7"
+    },
+    {
+      "id": "9",
+      "artistId": "5",
+      "genreId": "11"
+    },
+    {
+      "artistId": "6",
+      "genreId": "4",
+      "id": "Lzz2uxRBeZg"
+    },
+    {
+      "artistId": "6",
+      "genreId": "5",
+      "id": "-rQG9CUbItY"
+    },
+    {
+      "artistId": "6",
+      "genreId": "8",
+      "id": "vX-jJIBmzGE"
+    },
+    {
+      "artistId": "8",
+      "genreId": "6",
+      "id": "1Kvu3CTmEc8"
+    },
+    {
+      "artistId": "8",
+      "genreId": "4",
+      "id": "wRb5RCmH75g"
+    },
+    {
+      "artistId": "8",
+      "genreId": "9",
+      "id": "Ms2plsIp8_Q"
+    },
+    {
+      "artistId": "9",
+      "genreId": "1",
+      "id": "fii1Epv2gDA"
+    },
+    {
+      "artistId": "9",
+      "genreId": "5",
+      "id": "--74yIWnGZ8"
+    },
+    {
+      "artistId": "9",
+      "genreId": "8",
+      "id": "3chwzalTxME"
+    },
+    {
+      "artistId": "Zdw7DV8sgpI",
+      "genreId": "10",
+      "id": "nLnU3S2aR5g"
+    },
+    {
+      "artistId": "snHsBtTyGrg",
+      "genreId": "10",
+      "id": "GpcSaGJUpA8"
+    },
+    {
+      "artistId": "iLp6AlRoHXI",
+      "genreId": "6",
+      "id": "L95E4icu7dw"
+    },
+    {
+      "artistId": "vtP5KVIqk1g",
+      "genreId": "12",
+      "id": "PN8nkHwvIdk"
+    },
+    {
+      "artistId": "7",
+      "genreId": "11",
+      "id": "VqwiQBBCIHE"
+    },
+    {
+      "artistId": "7",
+      "genreId": "8",
+      "id": "X5HmY8I37s4"
+    },
+    {
+      "artistId": "1",
+      "genreId": "1",
+      "id": "m_dajbB0oWQ"
+    },
+    {
+      "artistId": "1",
+      "genreId": "2",
+      "id": "8xH5LQRUkiE"
+    },
+    {
+      "artistId": "TZrx87tzdrw",
+      "genreId": "6",
+      "id": "QNi8Q8LFrnY"
+    },
+    {
+      "artistId": "TZrx87tzdrw",
+      "genreId": "3",
+      "id": "L4DzXiXemKM"
+    },
+    {
+      "artistId": "DthFcijRb5I",
+      "genreId": "8",
+      "id": "CUQ8bxH_rcg"
+    },
+    {
+      "artistId": "DthFcijRb5I",
+      "genreId": "5",
+      "id": "FQ_90-DGMMA"
+    },
+    {
+      "artistId": "T8kAcCn2En4",
+      "genreId": "10",
+      "id": "_X3lJRD_x00"
+    },
+    {
+      "artistId": "T8kAcCn2En4",
+      "genreId": "11",
+      "id": "Z9aOW1Ydikc"
+    },
+    {
+      "artistId": "T8kAcCn2En4",
+      "genreId": "2",
+      "id": "molw9pQQegI"
+    },
+    {
+      "artistId": "-G0q5e1McTg",
+      "genreId": "11",
+      "id": "GW2HRUZoBA0"
+    },
+    {
+      "artistId": "-G0q5e1McTg",
+      "genreId": "12",
+      "id": "mhJ95k2BCEI"
+    },
+    {
+      "artistId": "-G0q5e1McTg",
+      "genreId": "4",
+      "id": "f3LgGpxViB4"
+    },
+    {
+      "artistId": "m3k2l-ugM9A",
+      "genreId": "10",
+      "id": "LZYjIvTllko"
+    },
+    {
+      "artistId": "67nO1YVhrng",
+      "genreId": "11",
+      "id": "QwYLhlnjHLs"
+    },
+    {
+      "artistId": "67nO1YVhrng",
+      "genreId": "2",
+      "id": "YILYmyBdR4Y"
+    },
+    {
+      "artistId": "67nO1YVhrng",
+      "genreId": "7",
+      "id": "TL5Hh0k6PPs"
+    },
+    {
+      "artistId": "uivEa_XazUM",
+      "genreId": "7",
+      "id": "oQPIVcUyTjw"
+    },
+    {
+      "artistId": "uivEa_XazUM",
+      "genreId": "6",
+      "id": "cFfgku6oBzY"
+    },
+    {
+      "artistId": "uivEa_XazUM",
+      "genreId": "5",
+      "id": "_sDv7ualrmU"
+    },
+    {
+      "artistId": "2",
+      "genreId": "3",
+      "id": "ChBKfS1SpYw"
+    },
+    {
+      "artistId": "N0NFvdSRRDU",
+      "genreId": "7",
+      "id": "lbdH3YPjwgo"
+    },
+    {
+      "artistId": "N0NFvdSRRDU",
+      "genreId": "11",
+      "id": "48DV0r-T6T4"
+    },
+    {
+      "artistId": "N0NFvdSRRDU",
+      "genreId": "5",
+      "id": "WjdkBUYye2g"
+    },
+    {
+      "artistId": "4",
+      "genreId": "9",
+      "id": "bWJZrFj7Phw"
+    },
+    {
+      "artistId": "4",
+      "genreId": "6",
+      "id": "OHsvs25Ezio"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
